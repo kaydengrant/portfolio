@@ -1,21 +1,21 @@
+import theme from './colors';
 import radius from './radius';
 import sizes from './sizes';
 import spacing from './spacing';
-import { darkTheme, lightTheme } from './colors';
-import { lightText, darkText } from './text';
+import text from './text';
 
 export const light = {
+  theme,
   radius,
   sizes,
   spacing,
-  lightTheme,
-  lightText
+  text
 }
 
 export const dark = {
+  theme,
   radius,
   sizes,
   spacing,
-  darkTheme,
-  darkText
+  text
 }
