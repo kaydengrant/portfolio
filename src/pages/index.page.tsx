@@ -1,12 +1,22 @@
 import type { NextPage } from 'next';
+import { ThemeProvider } from 'styled-components';
 
-import { MainContainer, Title } from './styles'
+import { Wrapper, MainContainer, Title } from './styles';
+import theme from '../theme';
+import TextButton from '../components/Buttons';
 
 const Home: NextPage = () => {
   return (
-    <MainContainer>
-      <Title>coming soon.</Title>
-    </MainContainer>
+    <>
+    <ThemeProvider theme={theme}>
+      <Wrapper>
+        <MainContainer>
+          <Title>coming soon.</Title>
+          <TextButton title='Hello'/> 
+        </MainContainer>
+      </Wrapper>
+    </ThemeProvider>
+    </>
   )
 }
 

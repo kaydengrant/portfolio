@@ -1,11 +1,11 @@
-import theme from './colors';
+import colors from './colors';
 import radius from './radius';
 import sizes from './sizes';
 import spacing from './spacing';
 import text from './text';
 
 export default {
-  theme,
+  colors,
   radius,
   sizes,
   spacing,
