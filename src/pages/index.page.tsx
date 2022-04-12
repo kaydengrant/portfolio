@@ -11,8 +11,7 @@ const Home: NextPage = () => {
     <ThemeProvider theme={theme}>
       <Wrapper>
         <MainContainer>
-          <Title>coming soon.</Title>
-          <TextButton title='Hello'/> 
+          <TextButton title='click me.'/> 
         </MainContainer>
       </Wrapper>
     </ThemeProvider>

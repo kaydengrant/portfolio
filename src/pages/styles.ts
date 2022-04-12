@@ -1,19 +1,21 @@
 import styled from 'styled-components';
-import { dark } from '../theme';
 
-export const MainContainer = styled.div`
+export const Wrapper = styled.div`
   position: absolute;
-  top: 0px;
-  right: 0px;
   display: flex;
   height: 100%;
   width: 100%;
-  margin: 0px;
-  justify-content: center;
-  align-items: center;
-  background-color: ${({theme}) => dark.darkTheme.black}
-  `;
+  top: 0px;
+  left: 0px;
+  `
+  
+  export const MainContainer = styled.div`
+  display: flex;
+  width: 100vw;
+  align-items: flex-start;
+  background-color: ${({theme}) => theme.colors.black};
+`
 
 export const Title = styled.text`
-  ${({theme}) => dark.darkText.h1};
+  ${({theme}) => theme.text.h1};
 `
