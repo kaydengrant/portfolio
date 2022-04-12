@@ -4,15 +4,7 @@ import sizes from './sizes';
 import spacing from './spacing';
 import text from './text';
 
-export const light = {
-  theme,
-  radius,
-  sizes,
-  spacing,
-  text
-}
-
-export const dark = {
+export default {
   theme,
   radius,
   sizes,
