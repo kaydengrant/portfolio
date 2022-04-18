@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 
 import { Wrapper, MainContainer, Title } from './styles';
 import theme from '../theme';
-import TextButton from '../components/Buttons';
+import GeneralButton from '../components/Buttons/GeneralButton';
 
 const Home: NextPage = () => {
   return (
@@ -11,7 +11,7 @@ const Home: NextPage = () => {
     <ThemeProvider theme={theme}>
       <Wrapper>
         <MainContainer>
-          <TextButton title='click me.'/> 
+          <GeneralButton title='click me.'/> 
         </MainContainer>
       </Wrapper>
     </ThemeProvider>

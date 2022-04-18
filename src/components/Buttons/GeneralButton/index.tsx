@@ -6,7 +6,7 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   title?: string
 }
 
-const TextButton: React.FC<Props> = ({ title, ...props}) => {
+const GeneralButton: React.FC<Props> = ({ title, ...props}) => {
   return (
     <ButtonContainer {...props}>
       <Title>
@@ -16,4 +16,4 @@ const TextButton: React.FC<Props> = ({ title, ...props}) => {
   )
 }
 
-export default TextButton;
+export default GeneralButton;
