@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { dark } from '../theme';
 
 export const MainContainer = styled.div`
   position: absolute;
@@ -11,9 +10,7 @@ export const MainContainer = styled.div`
   margin: 0px;
   justify-content: center;
   align-items: center;
-  background-color: ${({theme}) => dark.darkTheme.black}
   `;
 
 export const Title = styled.text`
-  ${({theme}) => dark.darkText.h1};
 `
