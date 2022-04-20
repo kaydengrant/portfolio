@@ -6,7 +6,8 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   title?: string
 }
 
-const GeneralButton: React.FC<Props> = ({ title, ...props}) => {
+const GeneralButton: React.FC<Props> = ({ title, ...props }) => {
+  
   return (
     <ButtonContainer {...props}>
       <Title>
