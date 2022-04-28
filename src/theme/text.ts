@@ -1,19 +1,24 @@
 import theme from "./colors";
 
 export default {
+  button:`
+    color: ${theme.coffee};
+    font-size: 18px;
+    font-weight: 600;
+  `,
   h1:`
     color: ${theme.lightBrown};
-    font-size: 48px;
+    font-size: 32px;
     font-weight: 600;
   `,
   h2:`
     color: ${theme.white};
-    font-size: 40px;
+    font-size: 24px;
     font-weight: 600;
   `,
   p:`
     color: ${theme.lightBrown};
-    font-size: 24px;
+    font-size: 15px;
     font-weight: 600;
   `
 }

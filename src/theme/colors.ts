@@ -1,10 +1,14 @@
 export default {
   /** Background light */
-  white: '#F7F3E3',
+  white: '#A6808C',
+  /**Off white */
+  almond: '#DCC9B6',
   /** Background dark */
-  black: '#3E363F',
+  coffee: '#3E363F',
+  /**Off black */
+  space: '#283044',
   /** Main */
-  lightBrown: '#AF9164',
-  /** Main Accent */
-  darkBrown: '#907C5C'
+  lightBrown: '#907C5C',
+  /** Main accent */
+  darkBrown: '#6c584c',
 }

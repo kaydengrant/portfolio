@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "test": "jest",
+    "devtest": "jest --watch",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
