@@ -2,7 +2,7 @@ import theme from "./colors";
 
 export default {
   button:`
-    color: ${theme.black};
+    color: ${theme.coffee};
     font-size: 18px;
     font-weight: 600;
   `,
