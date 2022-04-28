@@ -15,7 +15,7 @@ export const ButtonContainer = styled.button`
     transform: scale(1.1) translateY(4px);
     filter: brightness(1.2);
   }
-  `
+ `
   
 export const Title = styled.h2`
   ${({theme}) => theme.text.button};
