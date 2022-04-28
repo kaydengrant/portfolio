@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: StyledTheme }>`
     padding: 0;
     background: ${({theme}) => theme.colors.coffee};
   }
-`;
+`
   
 export const MainContainer = styled.div`
   display: flex;
@@ -16,8 +16,8 @@ export const MainContainer = styled.div`
   width: 100wh;
   align-items: center;
   justify-content: center;
-`;
+`
 
 export const Title = styled.text`
   ${({theme}) => theme.text.h1};
-`;
+`
