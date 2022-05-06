@@ -1,8 +1,8 @@
-import react, { ReactElement } from 'react';
+import react, { ReactElement, useState } from 'react';
 import { render, RenderOptions } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
 
-import theme from '../theme';
+import { lightTheme, darkTheme } from '../theme';
 
 interface ProviderProps {
   children?: React.ReactNode;
@@ -14,8 +14,11 @@ interface ProviderProps {
  * @returns children wrapped in the ThemeProvider with custom theme.
  */
 const AllTheProviders: React.FC<ProviderProps> = ({ children }) => {
+  
+  const [theme, setTheme] = useState('dark');
+
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme }>
       {children}
     </ThemeProvider>
   )

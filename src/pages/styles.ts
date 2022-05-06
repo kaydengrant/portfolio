@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: StyledTheme }>`
   body {
     margin: 0;
     padding: 0;
-    background: ${({theme}) => theme.colors.coffee};
+    background: ${({theme}) => theme.bg};
   }
 `
   
@@ -16,6 +16,7 @@ export const MainContainer = styled.div`
   width: 100wh;
   align-items: center;
   justify-content: center;
+
 `
 
 export const Title = styled.text`
