@@ -7,7 +7,7 @@ import { lightText, darkText} from './text';
 export const lightTheme =  {
   /**Colors */
   /**Bg */
-  bg: '#DCC9B6',
+  bg: '#FFFCE8',
   /**Bg contrast */
   off: '#3F403F',
   /** Main */

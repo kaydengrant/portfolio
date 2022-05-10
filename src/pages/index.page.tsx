@@ -9,8 +9,7 @@ import GeneralButton from '../components/Buttons/GeneralButton';
 import IconButton from '../components/Buttons/IconButton';
 import moon from '../../public/moonset.svg';
 import sun from '../../public/sun.svg';
-
-
+import Hand from '../../public/hand.svg';
 
 const Home: NextPage = () => {
 
@@ -25,7 +24,9 @@ const Home: NextPage = () => {
       <>
         <GlobalStyle/>
           <MainContainer>
+            <GeneralButton title={'hello'}/>
             <IconButton image={theme === 'light' ? sun : moon} onClick={() => themeToggler()}/>
+            <Hand width='200px'/>
           </MainContainer>
       </>
     </ThemeProvider>

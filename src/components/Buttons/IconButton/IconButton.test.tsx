@@ -13,7 +13,11 @@ describe('IconButton tests', () => {
   it('Should render IconButton with image passed in as prop', () => {
     const { getByText } = render(<IconButton {...defaultProps}/>);
 
-    expect(getByText(defaultProps.image)).toBeDefined();
+    expect(sun).toBeInTheDocument();
+  });
+
+  it('Should render IconButton and have onPress action when pressed', () => {
+
   });
 
 });
