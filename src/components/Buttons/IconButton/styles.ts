@@ -23,7 +23,7 @@ export const ButtonContainer = styled.button`
 
 export const Icon = styled.div`
   fill: ${({theme}) => theme.off};
-  &:hover {
+  ${ButtonContainer}:hover & {
     fill: ${({theme}) => theme.bg}
   }
 `
