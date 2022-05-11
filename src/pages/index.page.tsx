@@ -1,14 +1,11 @@
 import type { NextPage } from 'next';
 import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
+import { Helmet } from 'react-helmet';
 
 import { GlobalStyle, MainContainer } from './styles';
 import { lightTheme, darkTheme } from '../theme';
-
-import GeneralButton from '../components/Buttons/GeneralButton';
-import IconButton from '../components/Buttons/IconButton';
-import moon from '../../public/moonset.svg';
-import sun from '../../public/sun.svg';
+import NavBar from '../components/Buttons/NavBar';
 import Hand from '../../public/hand.svg';
 
 const Home: NextPage = () => {
@@ -22,11 +19,12 @@ const Home: NextPage = () => {
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <>
+        <Helmet>
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins&display=swap" rel="stylesheet"/>
+        </Helmet>
         <GlobalStyle/>
           <MainContainer>
-            <GeneralButton title={'hello'}/>
-            <IconButton image={theme === 'light' ? sun : moon} onClick={() => themeToggler()}/>
-            <Hand width='200px'/>
+            <NavBar theme={theme} themeToggler={themeToggler}/>
           </MainContainer>
       </>
     </ThemeProvider>
