@@ -6,7 +6,6 @@ import { Helmet } from 'react-helmet';
 import { GlobalStyle, MainContainer } from './styles';
 import { lightTheme, darkTheme } from '../theme';
 import NavBar from '../components/Buttons/NavBar';
-import Hand from '../../public/hand.svg';
 
 const Home: NextPage = () => {
 
