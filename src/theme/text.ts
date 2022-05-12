@@ -1,13 +1,20 @@
 export default {
   button:`
-    font-family: 'Poppins';
     font-size: 24px;
-  `,
-  h1:`
-    font-size: 32px;
     font-weight: 600;
   `,
+  h1:`
+    font-family: 'Inter';
+    font-size: 64px;
+    font-weight: 800;
+  `,
   h2:`
+    font-family: 'Inter';
+    font-size: 24px;
+    font-weight: 600;
+  `,
+  h3:`
+    font-family: 'Inter';
     font-size: 24px;
     font-weight: 600;
   `,
