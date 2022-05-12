@@ -5,7 +5,8 @@ import { Helmet } from 'react-helmet';
 
 import { GlobalStyle, MainContainer } from './styles';
 import { lightTheme, darkTheme } from '../theme';
-import NavBar from '../components/Buttons/NavBar';
+import NavBar from '../components/NavBar';
+import HeroSection from '../components/HeroSection';
 
 const Home: NextPage = () => {
 
@@ -19,11 +20,12 @@ const Home: NextPage = () => {
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <>
         <Helmet>
-          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins&display=swap" rel="stylesheet"/>
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&family=Poppins&display=swap" rel="stylesheet"/>
         </Helmet>
         <GlobalStyle/>
           <MainContainer>
             <NavBar theme={theme} themeToggler={themeToggler}/>
+            <HeroSection/>
           </MainContainer>
       </>
     </ThemeProvider>

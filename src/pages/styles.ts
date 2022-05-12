@@ -13,6 +13,8 @@ export const GlobalStyle = createGlobalStyle<{ theme: StyledTheme }>`
 export const MainContainer = styled.div`
   height: 100vh;
   width: 100wh;
+  display: flex;
+  flex-direction: column;
 `
 
 export const Title = styled.text`
