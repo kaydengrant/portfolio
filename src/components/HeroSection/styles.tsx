@@ -29,5 +29,7 @@ export const Buttons = styled.div`
 `
 
 export const LinkedinIcon = styled(IconButton)`
-  
+  Icon {
+    // increase padding
+  }
 `
