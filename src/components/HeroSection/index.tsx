@@ -8,6 +8,16 @@ import Linkedin from '../../../public/linkedin.svg';
 import Discord from '../../../public/discord.svg';
 
 const HeroSection: React.FC = () => {
+
+  const openInNewTab = (url: string): void => {
+    const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+    if (newWindow) {
+      newWindow.opener = null;
+    }
+  }
+
+  const onClickUrl = (url: string): (() => void) => () => openInNewTab(url);
+
   return (
     <MainContainer>
       <Text>
@@ -18,9 +28,9 @@ const HeroSection: React.FC = () => {
           {'< kayden grant />'}
         </h1>
         <Buttons>
-          <IconButton image={Github}/>
-          <LinkedinIcon image={Linkedin}/>
-          <IconButton image={Discord}/>
+          <IconButton image={Github} onClick={onClickUrl('https://github.com/kaydengrant')}/>
+          <LinkedinIcon image={Linkedin} onClick={onClickUrl('https://www.linkedin.com/in/kaydengrant/')}/>
+          <IconButton image={Discord} onClick={onClickUrl('https://discordapp.com/users/842486886302744597')}/>
         </Buttons>
       </Text>
       <Hand/>
