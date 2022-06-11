@@ -5,11 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyle, MainContainer } from './styles';
 import { lightTheme, darkTheme } from '../theme';
 
-import GeneralButton from '../components/Buttons/GeneralButton';
-import IconButton from '../components/Buttons/IconButton';
-import moon from '../../public/moonset.svg';
-import sun from '../../public/sun.svg';
-import Hand from '../../public/hand.svg';
+import AboutSlider from '../components/Sliders/AboutSlider';
 
 const Home: NextPage = () => {
 
@@ -24,9 +20,7 @@ const Home: NextPage = () => {
       <>
         <GlobalStyle/>
           <MainContainer>
-            <GeneralButton title={'hello'}/>
-            <IconButton image={theme === 'light' ? sun : moon} onClick={() => themeToggler()}/>
-            <Hand width='200px'/>
+            <AboutSlider/>
           </MainContainer>
       </>
     </ThemeProvider>
