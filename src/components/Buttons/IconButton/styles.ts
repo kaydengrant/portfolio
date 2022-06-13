@@ -4,8 +4,9 @@ export const ButtonContainer = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  margin: ${({theme}) => theme.spacing.extraSmall}px;
+  padding: 0;
+  cursor: pointer;
   background-color: ${({theme}) => theme.lightBrown};
   border-radius: ${({theme}) => theme.radius.small}px;
   border: none;
@@ -22,8 +23,11 @@ export const ButtonContainer = styled.button`
 `
 
 export const Icon = styled.div`
+  width: 40px;
+  height: 40px;
   fill: ${({theme}) => theme.off};
-  &:hover {
+  padding: ${({theme}) => theme.spacing.extraSmall}px;
+    ${ButtonContainer}:hover & {
     fill: ${({theme}) => theme.bg}
   }
 `

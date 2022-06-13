@@ -1,11 +1,13 @@
 import type { NextPage } from 'next';
 import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
+import { Helmet } from 'react-helmet';
 
 import { GlobalStyle, MainContainer } from './styles';
 import { lightTheme, darkTheme } from '../theme';
-
-import About from '../components/About';
+import NavBar from '../components/NavBar';
+import HeroSection from '../components/HeroSection';
+import AboutSlider from '../components/About'
 
 const Home: NextPage = () => {
 
@@ -18,9 +20,14 @@ const Home: NextPage = () => {
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <>
+        <Helmet>
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&family=Poppins&display=swap" rel="stylesheet"/>
+        </Helmet>
         <GlobalStyle/>
           <MainContainer>
-            <About/>
+            <NavBar theme={theme} themeToggler={themeToggler}/>
+            <HeroSection/>
+            <AboutSlider/>
           </MainContainer>
       </>
     </ThemeProvider>
