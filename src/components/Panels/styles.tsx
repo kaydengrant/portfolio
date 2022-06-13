@@ -16,8 +16,8 @@ export const MainContainer = styled.button`
 export const PanelContainer = styled.button<PanelProps>`
   display: flex;
   flex-direction: ${({isActive}) => !isActive ? 'row' : 'column'};
+  justify-content: ${({isActive}) => !isActive ? 'center' : 'flex-start'};
   align-items: center;
-  justify-content: center;
   cursor: pointer;
   border-radius: ${({theme}) => theme.radius.small}px;
   border: none;
@@ -31,10 +31,14 @@ export const PanelContainer = styled.button<PanelProps>`
     padding: ${({theme}) => theme.spacing.medium}px;
     color: ${({theme}) => theme.off};
     transform: rotate(${({isActive}) => !isActive ? 270 : 0}deg);
+    text-decoration: ${({isActive}) => !isActive ? 'none' : 'underline'};
   }
   h3 {
-    display: ${({isActive}) => !isActive ? 'none' : 'block'};
+    display: ${({isActive}) => !isActive ? 'none' : 'flex'};
     overflow-wrap: break-word;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 200%;
     color: ${({theme}) => theme.off};
   }
 `

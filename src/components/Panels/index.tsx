@@ -7,12 +7,13 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement>{
   title: string,
   body: string,
   isActive: boolean,
+  style?: CSSProperties
 }
 
-const Panel: React.FC<Props> = ({title, body, isActive, ...props}) => {
+const Panel: React.FC<Props> = ({title, body, isActive, style, ...props}) => {
   return (
-    <MainContainer {...props}>
-      <PanelContainer isActive={isActive}>
+    <MainContainer {...props} style={style}>
+      <PanelContainer isActive={isActive} style={style}>
         <h2>
           {title}
         </h2>
