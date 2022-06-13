@@ -1,14 +1,21 @@
 import React from 'react';
 
-import { MainContainer } from './styles';
+import { Title, MainContainer } from './styles';
+import AboutSlider from '../Sliders/AboutSlider';
 
 const About: React.FC = () => {
   return (
+    <>
+    <Title>
+      about.
+    </Title>
     <MainContainer>
+      <AboutSlider/>
       <h1>
-        about.
+        blurb about using react and react native components and how much better they make things. Lalalalala just trying to fill up space so that I look smarter than you.
       </h1>
     </MainContainer>
+    </>
   )
 }
 

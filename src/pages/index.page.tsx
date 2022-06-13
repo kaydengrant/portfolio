@@ -7,7 +7,7 @@ import { GlobalStyle, MainContainer } from './styles';
 import { lightTheme, darkTheme } from '../theme';
 import NavBar from '../components/NavBar';
 import HeroSection from '../components/HeroSection';
-import AboutSlider from '../components/About'
+import About from '../components/About';
 
 const Home: NextPage = () => {
 
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
           <MainContainer>
             <NavBar theme={theme} themeToggler={themeToggler}/>
             <HeroSection/>
-            <AboutSlider/>
+            <About/>
           </MainContainer>
       </>
     </ThemeProvider>
