@@ -1,8 +1,7 @@
-import React, { useState, useContext } from 'react';
-import { ThemeContext} from 'styled-components';
+import React, { useState } from 'react';
+import { useSprings } from 'react-spring';
 
-import { MainContainer } from './styles';
-import Panel from '../../Panels';
+import { MainContainer, PanelContainer } from './styles';
 
 const PANEL_DATA = [
   {
@@ -19,22 +18,33 @@ const PANEL_DATA = [
   }
 ]
 
+const getAnim = (index: number, curr: number) => {
+  const isActive = index === curr;
+  return({width: isActive ? 400 : 100})
+}
+
 const AboutSlider: React.FC = () => {
-
-  const themeContext = useContext(ThemeContext);
   const [activeIndex, setActiveIndex] = useState(0);
-
+  const [springs, api] = useSprings(PANEL_DATA.length, index => ({
+    ...getAnim(index, activeIndex)
+  }), [activeIndex]);
+  
   return (
     <MainContainer>
-      {PANEL_DATA.map((item, i) => {
+      {springs.map(({width}, i) => {
         return (
-          <Panel
-            title={item.title}
-            body={item.body}
-            isActive={activeIndex === i}
-            style={i % 2 != 0 ? {backgroundColor: themeContext.darkBrown} : {}}
+          <PanelContainer 
             onClick={() => setActiveIndex((activeIndex) => activeIndex === i ? -1 : i)}
-          />
+            isActive={activeIndex === i}
+            index={i}
+            style={{width}}>
+            <h2>
+              {PANEL_DATA[i].title}
+            </h2>
+            <h3>
+              {PANEL_DATA[i].body}
+            </h3>
+          </PanelContainer>
         )
       })}
     </MainContainer>
