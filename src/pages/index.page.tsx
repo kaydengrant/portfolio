@@ -6,6 +6,7 @@ import { GlobalStyle, MainContainer } from './styles';
 import { lightTheme, darkTheme } from '../theme';
 
 import AboutSlider from '../components/Sliders/AboutSlider';
+import ProjectCards from '../components/Cards/ProjectCards';
 
 const Home: NextPage = () => {
 
@@ -20,7 +21,7 @@ const Home: NextPage = () => {
       <>
         <GlobalStyle/>
           <MainContainer>
-            <AboutSlider/>
+            <ProjectCards/>
           </MainContainer>
       </>
     </ThemeProvider>

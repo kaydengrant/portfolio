@@ -37,7 +37,8 @@ const AboutSlider: React.FC = () => {
             onClick={() => setActiveIndex((activeIndex) => activeIndex === i ? -1 : i)}
             isActive={activeIndex === i}
             index={i}
-            style={{width}}>
+            style={{width}}
+          >
             <h2>
               {PANEL_DATA[i].title}
             </h2>
