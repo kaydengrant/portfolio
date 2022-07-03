@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import IconButton from '../../Buttons/IconButton';
+
 interface CardProps {
   image: string
 }
@@ -50,9 +52,13 @@ export const LargeCard = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 50%;
+  border-radius: ${({theme}) => theme.spacing.small}px;
+  z-index: 1000;
+  top: 25%;
+  width: 25%;
   height: 500px;
-  background-color: green;
+  padding: ${({theme}) => theme.spacing.medium}px;
+  background-color: ${({theme}) => theme.darkBrown};
   h2 {
     ${({theme}) => theme.h2}
     color: ${({theme}) => theme.off};
@@ -65,5 +71,23 @@ export const LargeCard = styled.div`
   h4 {
     ${({theme}) => theme.h4}
     color: ${({theme}) => theme.off};
+    overflow-wrap: break-word;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 200%;
   }
+`
+
+export const NavButtonContainer = styled.div`
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: baseline;
+  width: 100%;
+  height: 100%;
+`
+
+export const NavButton = styled(IconButton)`
+  margin: 0 -25px;
 `
