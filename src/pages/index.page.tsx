@@ -8,6 +8,7 @@ import { lightTheme, darkTheme } from '../theme';
 import NavBar from '../components/NavBar';
 import HeroSection from '../components/HeroSection';
 import About from '../components/About';
+import ProjectCards from '../components/Cards/ProjectCards';
 
 const Home: NextPage = () => {
 
@@ -28,6 +29,7 @@ const Home: NextPage = () => {
             <NavBar theme={theme} themeToggler={themeToggler}/>
             <HeroSection/>
             <About/>
+            <ProjectCards/>
           </MainContainer>
       </>
     </ThemeProvider>

@@ -8,9 +8,9 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   style?: CSSProperties
 }
 
-const IconButton: React.FC<Props> = ({ image, ...props }) => {
+const IconButton: React.FC<Props> = ({ image, style, ...props }) => {
   return (
-    <ButtonContainer {...props}>
+    <ButtonContainer {...props} style={style}>
       <Icon as={image}/>
     </ButtonContainer>
   )
