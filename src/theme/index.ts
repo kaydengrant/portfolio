@@ -1,8 +1,7 @@
-import { lightColors, darkColors} from './colors';
 import radius from './radius';
 import sizes from './sizes';
 import spacing from './spacing';
-import { lightText, darkText} from './text';
+import text from './text';
 
 export const lightTheme =  {
   /**Colors */
@@ -17,27 +16,7 @@ export const lightTheme =  {
   radius,
   sizes,
   spacing,
-  /**Text */
-  button:`
-    color: ${lightColors.bg};
-    font-size: 18px;
-    font-weight: 600;
-  `,
-  h1:`
-    color: ${lightColors.lightBrown};
-    font-size: 32px;
-    font-weight: 600;
-  `,
-  h2:`
-    color: ${lightColors.bg};
-    font-size: 24px;
-    font-weight: 600;
-  `,
-  p:`
-    color: ${lightColors.lightBrown};
-    font-size: 15px;
-    font-weight: 600;
-  `
+  text
 }
 
 export const darkTheme =  {
@@ -52,25 +31,5 @@ export const darkTheme =  {
   radius,
   sizes,
   spacing,
-  /**Text */
-  button:`
-    color: ${darkColors.bg};
-    font-size: 18px;
-    font-weight: 600;
-  `,
-  h1:`
-    color: ${darkColors.lightBrown};
-    font-size: 32px;
-    font-weight: 600;
-  `,
-  h2:`
-    color: ${darkColors.bg };
-    font-size: 24px;
-    font-weight: 600;
-  `,
-  p:`
-    color: ${darkColors.lightBrown};
-    font-size: 15px;
-    font-weight: 600;
-  `
+  text
 }
