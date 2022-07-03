@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { MainContainer, NamedContainer } from './styles';
-import IconButton from '../IconButton';
-import GeneralButton from '../GeneralButton';
-import Sun from '../../../../public/sun.svg'
-import Moon from '../../../../public/moonset.svg'
+import { MainContainer, NamedContainer,  } from './styles';
+import IconButton from '../Buttons/IconButton';
+import GeneralButton from '../Buttons/GeneralButton';
+import Sun from '../../../public/sun.svg';
+import Moon from '../../../public/moonset.svg';
 
 interface Props {
   theme: string,
-  themeToggler: any
+  themeToggler: () => void
 }
 
 const NavBar: React.FC<Props> = ({ theme, themeToggler }) => {
@@ -25,4 +25,4 @@ const NavBar: React.FC<Props> = ({ theme, themeToggler }) => {
   )
 }
 
-export default NavBar
+export default NavBar;

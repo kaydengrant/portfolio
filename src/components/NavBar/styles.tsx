@@ -7,6 +7,5 @@ export const MainContainer = styled.div`
 
 export const NamedContainer = styled.div`
   display: flex;
-  width: 380px;
   justify-content: space-between;
 `
