@@ -6,12 +6,23 @@ interface CardProps {
   image: string
 }
 
+export const Wrapper = styled.div`
+
+`
+
+export const Title = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: ${({theme}) => theme.spacing.large}px;
+  ${({theme}) => theme.text.h2};
+  color: ${({theme}) => theme.lightBrown};
+`
+
 export const MainContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
-
 `
 
 export const MiniCard = styled.button<CardProps>`
@@ -60,16 +71,16 @@ export const LargeCard = styled.div`
   padding: ${({theme}) => theme.spacing.medium}px;
   background-color: ${({theme}) => theme.darkBrown};
   h2 {
-    ${({theme}) => theme.h2}
+    ${({theme}) => theme.text.h2}
     color: ${({theme}) => theme.off};
   }
   h3 {
-    ${({theme}) => theme.h3}
+    ${({theme}) => theme.text.h3}
     color: ${({theme}) => theme.off};
     margin: 0;
   }
-  h4 {
-    ${({theme}) => theme.h4}
+  p {
+    ${({theme}) => theme.text.h4}
     color: ${({theme}) => theme.off};
     overflow-wrap: break-word;
     text-align: left;

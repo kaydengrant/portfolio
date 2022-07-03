@@ -12,13 +12,13 @@ export const Text = styled.div`
   align-items: center;
   justify-content: center;
   h1 {
-    margin: ${({theme}) => theme.spacing.extraSmall}px 0;
     ${({theme}) => theme.text.h1};
+    margin: ${({theme}) => theme.spacing.extraSmall}px 0;
     color: ${({theme}) => theme.lightBrown}
   }
   h3 {
-    margin: 0;
     ${({theme}) => theme.text.h3};
+    margin: 0;
     color: ${({theme}) => theme.lightBrown}
   }
 `
@@ -29,7 +29,5 @@ export const Buttons = styled.div`
 `
 
 export const LinkedinIcon = styled(IconButton)`
-  Icon {
-    // increase padding
-  }
+  
 `

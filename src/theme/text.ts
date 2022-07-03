@@ -10,7 +10,7 @@ export default {
   `,
   h2:`
     font-family: 'Inter';
-    font-size: 24px;
+    font-size: 48px;
     font-weight: 600;
   `,
   h3:`
@@ -19,6 +19,7 @@ export default {
     font-weight: 600;
   `,
   p:`
+    font-family: 'Inter';
     font-size: 15px;
     font-weight: 600;
   `

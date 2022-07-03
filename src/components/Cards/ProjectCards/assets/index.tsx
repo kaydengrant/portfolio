@@ -36,16 +36,5 @@ export const PROJECT_DATA = [
     body: 'Death provided affection. Unwilling can far sooner cousin advanced really learning insipidity stimulated. Cease cannot numerous breakfast avoid comfort forty  regular seeing call conviction green ladies pretty come continual. Without park well. Wooded bed disposal summer was greatly.',
     img: 'https://alleycatsandangels.org/wp-content/uploads/2019/07/big-gray-tabby-tire.jpg'
   },
-  {
-    title: '04123',
-    subtitle: '5',
-    body: 'Death provided affection. Unwilling can far sooner cousin advanced really learning insipidity stimulated. Cease cannot numerous breakfast avoid comfort forty  regular seeing call conviction green ladies pretty come continual. Without park well. Wooded bed disposal summer was greatly.',
-    img: 'https://alleycatsandangels.org/wp-content/uploads/2019/07/big-gray-tabby-tire.jpg'
-  },
-  {
-    title: '045125',
-    subtitle: '6',
-    body: 'Death provided affection. Unwilling can far sooner cousin advanced really learning insipidity stimulated. Cease cannot numerous breakfast avoid comfort forty  regular seeing call conviction green ladies pretty come continual. Without park well. Wooded bed disposal summer was greatly.',
-    img: 'https://alleycatsandangels.org/wp-content/uploads/2019/07/big-gray-tabby-tire.jpg'
-  }
+  
 ]

@@ -32,7 +32,7 @@ export const PanelContainer = styled(animated.button)<PanelProps>`
     transform: rotate(${({isActive}) => !isActive ? 270 : 0}deg);
     text-decoration: ${({isActive}) => !isActive ? 'none' : 'underline'};
   }
-  h3 {
+  p {
     display: ${({isActive}) => !isActive ? 'none' : 'flex'};
     width: 300px;
     overflow-wrap: break-word;
