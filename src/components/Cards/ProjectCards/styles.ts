@@ -12,10 +12,21 @@ export const Wrapper = styled.div`
 
 export const Title = styled.div`
   display: flex;
-  justify-content: center;
-  margin-bottom: ${({theme}) => theme.spacing.large}px;
-  ${({theme}) => theme.text.h2};
-  color: ${({theme}) => theme.lightBrown};
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    ${({theme}) => theme.text.h2};
+    margin: ${({theme}) => theme.spacing.large}px 0 0 0;
+    color: ${({theme}) => theme.lightBrown};
+  }
+  h3 {
+    ${({theme}) => theme.text.h3};
+    color: ${({theme}) => theme.lightBrown};
+    overflow-wrap: break-word;
+    align-self: center;
+    text-align: center;
+    width: 30%;
+  }
 `
 
 export const MainContainer = styled.div`
@@ -30,14 +41,12 @@ export const MiniCard = styled.button<CardProps>`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin: 20px 0 0 2%;
-  background-image: url(${({image}) => image});
-  width: calc(100% * (1/4) - 10px - 1px);
+  margin: 20px 2%;
+  width: calc(100% * (1/4));
   height: 300px;
   border: none;
   cursor: pointer;
   border-radius: ${({theme}) => theme.radius.small}px;
-  filter: brightness(.8);
   transition: transform .2s;
   &:hover {
     transform: scale(1.1); 
@@ -46,14 +55,21 @@ export const MiniCard = styled.button<CardProps>`
   &:hover:active {
     transform: scale(1.1) translateY(4px);
   }
+  div {
+    background-image: url(${({image}) => image});
+    height: 100%;
+    width: 100%;
+  }
   h2 {
-    ${({theme}) => theme.h2}
+    ${({theme}) => theme.text.h2}
     color: ${({theme}) => theme.off};
-    margin: 0;
+    margin: ${({theme}) => theme.spacing.small}px;
+    filter: blur(-5px);
   }
   h3 {
-    ${({theme}) => theme.h3}
+    ${({theme}) => theme.text.h3}
     color: ${({theme}) => theme.off};
+    margin: ${({theme}) => theme.spacing.small}px;
   }
 `
 
@@ -80,7 +96,7 @@ export const LargeCard = styled.div`
     margin: 0;
   }
   p {
-    ${({theme}) => theme.text.h4}
+    ${({theme}) => theme.text.p}
     color: ${({theme}) => theme.off};
     overflow-wrap: break-word;
     text-align: left;

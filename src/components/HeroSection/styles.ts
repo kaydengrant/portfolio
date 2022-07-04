@@ -1,9 +1,10 @@
 import styled from "styled-components";
+
 import IconButton from "../Buttons/IconButton";
 
 export const MainContainer = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 `
 
 export const Text = styled.div`
@@ -13,11 +14,11 @@ export const Text = styled.div`
   justify-content: center;
   h1 {
     ${({theme}) => theme.text.h1};
-    margin: ${({theme}) => theme.spacing.extraSmall}px 0;
+    margin: ${({theme}) => theme.spacing.small}px 0;
     color: ${({theme}) => theme.lightBrown}
   }
-  h3 {
-    ${({theme}) => theme.text.h3};
+  h2 {
+    ${({theme}) => theme.text.h2};
     margin: 0;
     color: ${({theme}) => theme.lightBrown}
   }

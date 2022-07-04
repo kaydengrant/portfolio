@@ -25,7 +25,10 @@ export const PanelContainer = styled(animated.button)<PanelProps>`
   &:hover {
     filter: ${({isActive}) => !isActive ? 'brightness(1.2)' : 'brightness(1)'};
   }
-  h2 {
+  h3 {
+    display: flex;
+    justify-content: center;
+    ${({theme}) => theme.text.h3}
     margin: 0;
     padding: ${({theme}) => theme.spacing.medium}px;
     color: ${({theme}) => theme.off};
@@ -34,6 +37,8 @@ export const PanelContainer = styled(animated.button)<PanelProps>`
   }
   p {
     display: ${({isActive}) => !isActive ? 'none' : 'flex'};
+    justify-content: center;
+    ${({theme}) => theme.text.p}
     width: 300px;
     overflow-wrap: break-word;
     text-align: left;
