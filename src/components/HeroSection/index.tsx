@@ -21,7 +21,7 @@ const HeroSection: React.FC = () => {
   return (
     <MainContainer>
       <Text>
-        <h3>full stack developer</h3>
+        <h2>full-stack developer</h2>
         <h1>{'< kayden grant />'}</h1>
         <Buttons>
           <IconButton image={IoLogoGithub} onClick={onClickUrl('https://github.com/kaydengrant')}/>

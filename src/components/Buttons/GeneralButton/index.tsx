@@ -12,7 +12,7 @@ const GeneralButton: React.FC<Props> = ({ title, ...props }) => {
   
   return (
     <ButtonContainer {...props}>
-      {title}
+      <h3>{title}</h3>
     </ButtonContainer>
   )
 }

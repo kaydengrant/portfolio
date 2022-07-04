@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const ButtonContainer = styled.button`
-  ${({theme}) => theme.text.button};
   margin: ${({theme}) => theme.spacing.extraSmall}px;
   padding: ${({theme}) => theme.spacing.small}px;
   color: ${({theme}) => theme.off};
@@ -11,6 +10,10 @@ export const ButtonContainer = styled.button`
   border: none;
   transition: transform .2s;
   box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.35);
+  h3 {
+    ${({theme}) => theme.text.button};
+    margin: 0;
+  }
   &:hover {
     transform: scale(1.1); 
     background-color: ${({theme}) => theme.off};

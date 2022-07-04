@@ -39,7 +39,7 @@ const AboutSlider: React.FC = () => {
             index={i}
             style={{width}}
           >
-            <h2>{PANEL_DATA[i].title}</h2>
+            <h3>{PANEL_DATA[i].title}</h3>
             <p>{PANEL_DATA[i].body}</p>
           </PanelContainer>
         )

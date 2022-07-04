@@ -9,8 +9,7 @@ const About: React.FC = () => {
       <Title>about.</Title>
       <MainContainer>
         <AboutSlider/>
-        <h1>
-          blurb about using react and react native components and how much better they make things. Lalalalala just trying to fill up space so that I look smarter than you.</h1>
+        <h3>blurb about using react and react native components and how much better they make things. Lalalalala just trying to fill up space so that I look smarter than you.</h3>
       </MainContainer>
     </Wrapper>
   )

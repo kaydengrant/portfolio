@@ -12,7 +12,10 @@ const ProjectCards: React.FC = () => {
 
   return (
     <Wrapper>
-      <Title>projects.</Title>
+      <Title>
+        <h2>projects.</h2>
+        <h3>something about how much i have learned from the projects i have contributed to</h3>
+      </Title>
       <MainContainer>
         {PROJECT_DATA.map((item, i) => (
             <>
@@ -20,6 +23,7 @@ const ProjectCards: React.FC = () => {
               image={PROJECT_DATA[i].img}
               onClick={() => setActiveIndex(i)}
             >
+              <div>{PROJECT_DATA[i].img}</div>
               <h2>{PROJECT_DATA[i].title}</h2>
               <h3>{PROJECT_DATA[i].subtitle}</h3>
             </MiniCard>
