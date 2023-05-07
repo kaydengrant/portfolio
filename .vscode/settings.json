@@ -1,0 +1,14 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#302654",
+    "titleBar.activeBackground": "#433576",
+    "titleBar.activeForeground": "#FAF9FC"
+  },
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true
+  },
+  "eslint.nodePath": ".yarn/sdks",
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
+}
