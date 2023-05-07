@@ -36,6 +36,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-next", "virtual:f4127dad4ad2e4383c875747b33a39a89c8f42247125b14a1cd4a908ee8150606c3c67210f63c4b983a1c4f5ed271dc72bd741bfb6484c4f81248e7f36637f46#npm:13.4.1"],\
             ["next", "virtual:f4127dad4ad2e4383c875747b33a39a89c8f42247125b14a1cd4a908ee8150606c3c67210f63c4b983a1c4f5ed271dc72bd741bfb6484c4f81248e7f36637f46#npm:13.4.1"],\
             ["postcss", "npm:8.4.23"],\
+            ["prettier", "npm:2.8.8"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:f4127dad4ad2e4383c875747b33a39a89c8f42247125b14a1cd4a908ee8150606c3c67210f63c4b983a1c4f5ed271dc72bd741bfb6484c4f81248e7f36637f46#npm:18.2.0"],\
             ["tailwindcss", "npm:3.3.2"],\
@@ -3800,6 +3801,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-next", "virtual:f4127dad4ad2e4383c875747b33a39a89c8f42247125b14a1cd4a908ee8150606c3c67210f63c4b983a1c4f5ed271dc72bd741bfb6484c4f81248e7f36637f46#npm:13.4.1"],\
             ["next", "virtual:f4127dad4ad2e4383c875747b33a39a89c8f42247125b14a1cd4a908ee8150606c3c67210f63c4b983a1c4f5ed271dc72bd741bfb6484c4f81248e7f36637f46#npm:13.4.1"],\
             ["postcss", "npm:8.4.23"],\
+            ["prettier", "npm:2.8.8"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:f4127dad4ad2e4383c875747b33a39a89c8f42247125b14a1cd4a908ee8150606c3c67210f63c4b983a1c4f5ed271dc72bd741bfb6484c4f81248e7f36637f46#npm:18.2.0"],\
             ["tailwindcss", "npm:3.3.2"],\
@@ -3954,6 +3956,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/prelude-ls-npm-1.2.1-3e4d272a55-cd192ec0d0.zip/node_modules/prelude-ls/",\
           "packageDependencies": [\
             ["prelude-ls", "npm:1.2.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["prettier", [\
+        ["npm:2.8.8", {\
+          "packageLocation": "./.yarn/cache/prettier-npm-2.8.8-430828a36c-b49e409431.zip/node_modules/prettier/",\
+          "packageDependencies": [\
+            ["prettier", "npm:2.8.8"]\
           ],\
           "linkType": "HARD"\
         }]\
