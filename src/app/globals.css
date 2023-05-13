@@ -1,27 +1,59 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap');
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer components {
+  .content-container {
+    @apply w-full px-8 lg:w-[1000px] lg:px-0;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  .clickable {
+    @apply cursor-pointer transition-all select-none hover:scale-110 hover:text-green;
+  }
+
+  .react-icons {
+    @apply clickable text-white w-[40px] h-[40px] m-4;
   }
 }
 
+html {
+  @apply bg-black;
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply flex flex-col items-center min-w-full text-white;
+}
+
+h1 {
+  @apply font-rubik font-semibold md:text-8xl text-6xl text-white;
+}
+
+h2 {
+  @apply font-rubik font-semibold md:text-4xl text-2xl text-white;
+}
+
+h3 {
+  @apply font-rubik font-medium md:text-2xl text-xl text-white;
+}
+
+p {
+  @apply font-rubik font-normal text-base leading-relaxed;
+}
+
+section {
+  @apply my-20;
+}
+
+nav {
+  @apply flex flex-row justify-between items-center my-2;
+}
+
+button,
+a {
+  @apply clickable;
+}
+
+form input,
+form textarea {
 }
