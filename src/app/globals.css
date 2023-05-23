@@ -38,19 +38,22 @@ h3 {
 }
 
 p {
-  @apply font-rubik font-normal text-base leading-relaxed;
+  @apply font-rubik font-normal md:text-xl text-base leading-relaxed;
 }
 
 section {
   @apply my-20;
 }
 
-nav {
-  @apply flex flex-row justify-between items-center my-2;
+li {
+  @apply mx-4 my-4 md:my-0;
 }
 
-button,
 a {
+  @apply clickable hover:underline hover:underline-offset-4;
+}
+
+button {
   @apply clickable;
 }
 
