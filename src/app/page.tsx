@@ -6,13 +6,11 @@ import HeroSection from '@/components/HeroSection';
 
 export default function Home() {
   return (
-    <div className='content-container'>
+    <>
       <Navigation />
-      {/** hero section */}
-      <HeroSection />
-      {/** showbox section */}
-
-      {/** contact section */}
-    </div>
+      <div className='content-container z-[-2]'>
+        <HeroSection />
+      </div>
+    </>
   );
 }
