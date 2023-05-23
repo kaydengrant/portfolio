@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useSpring, animated, easings } from '@react-spring/web';
 
-const Profile = () => {
+const ProfileBlob = () => {
   const blob = useSpring({
     from: {
       borderRadius: '42% 56% 73% 30%/42% 42% 55% 68%',
@@ -53,4 +53,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default ProfileBlob;

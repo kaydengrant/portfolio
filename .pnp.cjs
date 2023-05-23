@@ -35,6 +35,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["autoprefixer", "virtual:f4127dad4ad2e4383c875747b33a39a89c8f42247125b14a1cd4a908ee8150606c3c67210f63c4b983a1c4f5ed271dc72bd741bfb6484c4f81248e7f36637f46#npm:10.4.14"],\
             ["eslint", "npm:8.40.0"],\
             ["eslint-config-next", "virtual:f4127dad4ad2e4383c875747b33a39a89c8f42247125b14a1cd4a908ee8150606c3c67210f63c4b983a1c4f5ed271dc72bd741bfb6484c4f81248e7f36637f46#npm:13.4.1"],\
+            ["hamburger-react", "virtual:f4127dad4ad2e4383c875747b33a39a89c8f42247125b14a1cd4a908ee8150606c3c67210f63c4b983a1c4f5ed271dc72bd741bfb6484c4f81248e7f36637f46#npm:2.5.0"],\
             ["next", "virtual:f4127dad4ad2e4383c875747b33a39a89c8f42247125b14a1cd4a908ee8150606c3c67210f63c4b983a1c4f5ed271dc72bd741bfb6484c4f81248e7f36637f46#npm:13.4.1"],\
             ["postcss", "npm:8.4.23"],\
             ["prettier", "npm:2.8.8"],\
@@ -2503,6 +2504,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["hamburger-react", [\
+        ["npm:2.5.0", {\
+          "packageLocation": "./.yarn/cache/hamburger-react-npm-2.5.0-d4457f0334-5c3835a1b2.zip/node_modules/hamburger-react/",\
+          "packageDependencies": [\
+            ["hamburger-react", "npm:2.5.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:f4127dad4ad2e4383c875747b33a39a89c8f42247125b14a1cd4a908ee8150606c3c67210f63c4b983a1c4f5ed271dc72bd741bfb6484c4f81248e7f36637f46#npm:2.5.0", {\
+          "packageLocation": "./.yarn/__virtual__/hamburger-react-virtual-518a73526a/0/cache/hamburger-react-npm-2.5.0-d4457f0334-5c3835a1b2.zip/node_modules/hamburger-react/",\
+          "packageDependencies": [\
+            ["hamburger-react", "virtual:f4127dad4ad2e4383c875747b33a39a89c8f42247125b14a1cd4a908ee8150606c3c67210f63c4b983a1c4f5ed271dc72bd741bfb6484c4f81248e7f36637f46#npm:2.5.0"],\
+            ["@types/react", "npm:18.2.6"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["has", [\
         ["npm:1.0.3", {\
           "packageLocation": "./.yarn/cache/has-npm-1.0.3-b7f00631c1-b9ad53d53b.zip/node_modules/has/",\
@@ -3924,6 +3947,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["autoprefixer", "virtual:f4127dad4ad2e4383c875747b33a39a89c8f42247125b14a1cd4a908ee8150606c3c67210f63c4b983a1c4f5ed271dc72bd741bfb6484c4f81248e7f36637f46#npm:10.4.14"],\
             ["eslint", "npm:8.40.0"],\
             ["eslint-config-next", "virtual:f4127dad4ad2e4383c875747b33a39a89c8f42247125b14a1cd4a908ee8150606c3c67210f63c4b983a1c4f5ed271dc72bd741bfb6484c4f81248e7f36637f46#npm:13.4.1"],\
+            ["hamburger-react", "virtual:f4127dad4ad2e4383c875747b33a39a89c8f42247125b14a1cd4a908ee8150606c3c67210f63c4b983a1c4f5ed271dc72bd741bfb6484c4f81248e7f36637f46#npm:2.5.0"],\
             ["next", "virtual:f4127dad4ad2e4383c875747b33a39a89c8f42247125b14a1cd4a908ee8150606c3c67210f63c4b983a1c4f5ed271dc72bd741bfb6484c4f81248e7f36637f46#npm:13.4.1"],\
             ["postcss", "npm:8.4.23"],\
             ["prettier", "npm:2.8.8"],\
