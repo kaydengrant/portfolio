@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { LinkedinIcon, GithubIcon } from './Icons';
 
 import ProfileBlob from './ProfileBlob';
 import { openInNewTab } from '@/utils/utils';
@@ -13,14 +13,18 @@ const HeroSection = () => {
         Software Engineer based in Seattle
       </h2>
       <div className='flex flex-row justify-center'>
-        <FaGithub
-          className='react-icons'
+        <span
+          className='clickable'
           onClick={openInNewTab('https://github.com/kaydengrant')}
-        />
-        <FaLinkedin
-          className='react-icons'
+        >
+          <GithubIcon />
+        </span>
+        <span
+          className='clickable'
           onClick={openInNewTab('https://www.linkedin.com/in/kaydengrant/')}
-        />
+        >
+          <LinkedinIcon />
+        </span>
       </div>
     </section>
   );

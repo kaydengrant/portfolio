@@ -41,7 +41,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.8.8"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:f4127dad4ad2e4383c875747b33a39a89c8f42247125b14a1cd4a908ee8150606c3c67210f63c4b983a1c4f5ed271dc72bd741bfb6484c4f81248e7f36637f46#npm:18.2.0"],\
-            ["react-icons", "virtual:f4127dad4ad2e4383c875747b33a39a89c8f42247125b14a1cd4a908ee8150606c3c67210f63c4b983a1c4f5ed271dc72bd741bfb6484c4f81248e7f36637f46#npm:4.8.0"],\
             ["tailwindcss", "npm:3.3.2"],\
             ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=b5f058"]\
           ],\
@@ -3953,7 +3952,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.8.8"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:f4127dad4ad2e4383c875747b33a39a89c8f42247125b14a1cd4a908ee8150606c3c67210f63c4b983a1c4f5ed271dc72bd741bfb6484c4f81248e7f36637f46#npm:18.2.0"],\
-            ["react-icons", "virtual:f4127dad4ad2e4383c875747b33a39a89c8f42247125b14a1cd4a908ee8150606c3c67210f63c4b983a1c4f5ed271dc72bd741bfb6484c4f81248e7f36637f46#npm:4.8.0"],\
             ["tailwindcss", "npm:3.3.2"],\
             ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=b5f058"]\
           ],\
@@ -4208,28 +4206,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["loose-envify", "npm:1.4.0"],\
             ["react", "npm:18.2.0"],\
             ["scheduler", "npm:0.23.0"]\
-          ],\
-          "packagePeers": [\
-            "@types/react",\
-            "react"\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["react-icons", [\
-        ["npm:4.8.0", {\
-          "packageLocation": "./.yarn/cache/react-icons-npm-4.8.0-aa5423cd6c-4dbba7ad98.zip/node_modules/react-icons/",\
-          "packageDependencies": [\
-            ["react-icons", "npm:4.8.0"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:f4127dad4ad2e4383c875747b33a39a89c8f42247125b14a1cd4a908ee8150606c3c67210f63c4b983a1c4f5ed271dc72bd741bfb6484c4f81248e7f36637f46#npm:4.8.0", {\
-          "packageLocation": "./.yarn/__virtual__/react-icons-virtual-a40fc40f22/0/cache/react-icons-npm-4.8.0-aa5423cd6c-4dbba7ad98.zip/node_modules/react-icons/",\
-          "packageDependencies": [\
-            ["react-icons", "virtual:f4127dad4ad2e4383c875747b33a39a89c8f42247125b14a1cd4a908ee8150606c3c67210f63c4b983a1c4f5ed271dc72bd741bfb6484c4f81248e7f36637f46#npm:4.8.0"],\
-            ["@types/react", "npm:18.2.6"],\
-            ["react", "npm:18.2.0"]\
           ],\
           "packagePeers": [\
             "@types/react",\
