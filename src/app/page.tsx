@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Navigation />
-      <div className='content-container z-[-2]'>
+      <div className='content-container'>
         <HeroSection />
       </div>
     </>

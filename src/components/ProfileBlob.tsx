@@ -37,7 +37,7 @@ const ProfileBlob = () => {
 
   return (
     <animated.div
-      className='bg-gradient-to-br from-green to-lightGreen overflow-hidden min-w-[300px] border-2 border-white'
+      className='bg-gradient-to-br from-green to-lightGreen overflow-hidden min-w-[300px] border-2 border-white z-[-2]'
       style={blob}
     >
       <animated.div style={antiAnim}>
