@@ -76,21 +76,19 @@ const ShuffleEmoticon = () => {
   });
 
   return (
-    <div className='flex justify-center items-center'>
+    <div className='flex justify-center items-center clickable'>
       {emoticonData.slice(index, index + 1).map((item) => {
         return (
-          <>
-            <div key={item.key} onClick={handleIndex}>
-              {index == 2 ? (
-                <div className='flex justify-center'>
-                  <Image src={Computer} alt='' className='absolute' />
-                </div>
-              ) : undefined}
-              <animated.div style={item.anim}>
-                <Image src={item.icon} alt='' />
-              </animated.div>
-            </div>
-          </>
+          <div key={item.key} onClick={handleIndex}>
+            {index == 2 ? (
+              <div className='flex justify-center'>
+                <Image src={Computer} alt='' className='absolute' />
+              </div>
+            ) : undefined}
+            <animated.div style={item.anim}>
+              <Image src={item.icon} alt='' />
+            </animated.div>
+          </div>
         );
       })}
     </div>
