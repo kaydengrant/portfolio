@@ -12,13 +12,13 @@ const HeroSection = () => {
       <h2 className='text-gradient my-5'>Software Engineer based in Seattle</h2>
       <div className='flex flex-row justify-center'>
         <span
-          className='clickable'
+          className='clickable mx-4'
           onClick={openInNewTab('https://github.com/kaydengrant')}
         >
           <Icon.Github />
         </span>
         <span
-          className='clickable'
+          className='clickable mx-4'
           onClick={openInNewTab('https://www.linkedin.com/in/kaydengrant/')}
         >
           <Icon.Linkedin />
