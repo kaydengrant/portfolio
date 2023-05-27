@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Icon } from './Icon';
 import { openInNewTab } from '@/utils/utils';
+import ScrollingBar from './ScrollingBar';
 
 const SkillsSection = () => {
   return (
@@ -56,6 +57,9 @@ const SkillsSection = () => {
             <Icon.Jest />
           </span>
         </div>
+      </div>
+      <div className='mt-20'>
+        <ScrollingBar data={[1, 2, 3]} direction='left' />
       </div>
     </section>
   );
