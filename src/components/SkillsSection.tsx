@@ -1,14 +1,15 @@
 import React from 'react';
 
+import MarqueeBar from './MarqueeBar';
 import { Icon } from './Icon';
-import { openInNewTab } from '@/utils/utils';
-import ScrollingBar from './ScrollingBar';
+import { openInNewTab } from '@/utils';
+import { techSkillsData, softSkillsData } from '@/data/marqueeData';
 
 const SkillsSection = () => {
   return (
-    <section className='flex flex-col items-center text-center'>
+    <section className='flex flex-col items-center'>
       <div>
-        <h2 className='text-gradient mb-5'>Tech Stack</h2>
+        <h2 className='text-gradient mb-5 text-center'>Tech Stack</h2>
         <div className='flex flex-row justify-center items-center'>
           <span
             className='clickable mx-2 md:mx-4'
@@ -58,8 +59,12 @@ const SkillsSection = () => {
           </span>
         </div>
       </div>
-      <div className='mt-20'>
-        <ScrollingBar data={[1, 2, 3]} direction='left' />
+      <div className='flex flex-col mt-20 w-full'>
+        <h3 className='flex flex-row justify-start'>
+          Some other skills include
+        </h3>
+        <MarqueeBar data={techSkillsData} direction='left' logoBar={true} />
+        <MarqueeBar data={softSkillsData} direction='right' logoBar={false} />
       </div>
     </section>
   );
