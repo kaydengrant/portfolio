@@ -2,7 +2,7 @@ import React from 'react';
 import { Icon } from './Icon';
 
 import ProfileBlob from './ProfileBlob';
-import { openInNewTab } from '@/utils/utils';
+import { openInNewTab } from '@/utils';
 
 const HeroSection = () => {
   return (
