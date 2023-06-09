@@ -13,20 +13,20 @@ interface Props {
 
 const MarqueeBar: React.FC<Props> = ({ data, direction, logoBar }) => {
   return (
-    <div className='my-5 py-12'>
-      <div className='absolute left-0 w-full '>
-        <Marquee
-          autoFill={true}
-          pauseOnHover={true}
-          direction={direction}
-          speed={40}
-          className='flex items-center justify-center overflow-hidden'
-        >
+    <div className={`absolute left-0 w-full `}>
+      <Marquee
+        pauseOnHover
+        direction={direction}
+        gradient
+        gradientColor={[21, 21, 21]}
+        className='overflow-hidden'
+      >
+        <div className='flex items-center justify-center'>
           {data.map((item) => {
             return (
               <div
                 key={item.key}
-                className={`px-10 clickable ${
+                className={`px-14 clickable ${
                   logoBar ? 'cursor-pointer' : 'cursor-default'
                 }`}
                 onClick={logoBar ? openInNewTab(item.link) : undefined}
@@ -35,8 +35,8 @@ const MarqueeBar: React.FC<Props> = ({ data, direction, logoBar }) => {
               </div>
             );
           })}
-        </Marquee>
-      </div>
+        </div>
+      </Marquee>
     </div>
   );
 };

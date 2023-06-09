@@ -59,12 +59,26 @@ const SkillsSection = () => {
           </span>
         </div>
       </div>
-      <div className='flex flex-col mt-20 w-full'>
-        <h3 className='flex flex-row justify-start'>
-          Some other skills include
-        </h3>
-        <MarqueeBar data={techSkillsData} direction='left' logoBar={true} />
-        <MarqueeBar data={softSkillsData} direction='right' logoBar={false} />
+      <div className='flex flex-col mt-20 w-full '>
+        <h3 className='flex flex-row justify-start'>Other skills include</h3>
+        <div className='absolute w-full left-0'>
+          <div className='flex relative'>
+            <span className='mt-[2.5rem]'>
+              <MarqueeBar
+                data={techSkillsData}
+                direction='right'
+                logoBar={true}
+              />
+            </span>
+            <span className='mt-[10rem]'>
+              <MarqueeBar
+                data={softSkillsData}
+                direction='left'
+                logoBar={false}
+              />
+            </span>
+          </div>
+        </div>
       </div>
     </section>
   );
