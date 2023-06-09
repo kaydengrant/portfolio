@@ -7,8 +7,10 @@ import { openInNewTab } from '@/utils';
 const HeroSection = () => {
   return (
     <section className='flex flex-col items-center text-center'>
-      <ProfileBlob />
-      <h1 className='mt-10'>{'<Kayden Grant/>'}</h1>
+      <div className='min-w-[300px]'>
+        <ProfileBlob />
+      </div>
+      <h1 className='mt-10'>{'Kayden Grant'}</h1>
       <h2 className='text-gradient my-5'>Software Engineer based in Seattle</h2>
       <div className='flex flex-row justify-center'>
         <span
