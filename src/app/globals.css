@@ -15,10 +15,6 @@
   .text-gradient {
     @apply text-opacity-0 bg-clip-text bg-gradient-to-tr from-green to-lightGreen;
   }
-
-  .svg-icon {
-    @apply w-[50px] h-[50px] m-4;
-  }
 }
 
 html {
@@ -30,7 +26,7 @@ body {
 }
 
 h1 {
-  @apply font-rubik font-semibold md:text-8xl text-6xl text-white;
+  @apply font-rubik font-semibold md:text-6xl text-4xl text-white;
 }
 
 h2 {
