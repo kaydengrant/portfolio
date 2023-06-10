@@ -59,8 +59,8 @@ const SkillsSection = () => {
           </span>
         </div>
       </div>
-      <div className='flex flex-col mt-20 w-full '>
-        <h3 className='flex flex-row justify-start'>Other skills include</h3>
+      <div className='flex flex-col mt-28 w-full '>
+        <h4 className='flex flex-row justify-center'>Other skills include</h4>
         <div className='absolute w-full left-0'>
           <div className='flex relative'>
             <span className='mt-[2.5rem]'>

@@ -30,7 +30,7 @@ const Navigation = () => {
         </ul>
         <li>
           <a href=''>
-            <OutlineButton text='Get in Touch' Tag={'h3'} />
+            <OutlineButton text='Get in Touch' Tag={'h4'} />
           </a>
         </li>
       </animated.ul>

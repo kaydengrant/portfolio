@@ -11,7 +11,7 @@ const HeroSection = () => {
         <ProfileBlob />
       </div>
       <h1 className='mt-10'>{'Kayden Grant'}</h1>
-      <h2 className='text-gradient my-5'>Software Engineer based in Seattle</h2>
+      <h3 className='text-gradient my-5'>Software Engineer based in Seattle</h3>
       <div className='flex flex-row justify-center'>
         <span
           className='clickable mx-4'
