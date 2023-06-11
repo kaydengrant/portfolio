@@ -19,6 +19,7 @@ const MarqueeBar: React.FC<Props> = ({ data, direction, logoBar }) => {
         direction={direction}
         gradient
         gradientColor={[21, 21, 21]}
+        gradientWidth={75}
         className='overflow-hidden'
       >
         <div className='flex items-center justify-center'>
@@ -26,12 +27,12 @@ const MarqueeBar: React.FC<Props> = ({ data, direction, logoBar }) => {
             return (
               <div
                 key={item.key}
-                className={`px-14 clickable ${
+                className={`px-8 clickable ${
                   logoBar ? 'cursor-pointer' : 'cursor-default'
                 }`}
                 onClick={logoBar ? openInNewTab(item.link) : undefined}
               >
-                {logoBar ? <Logo type={item.value} /> : <p>{item.value}</p>}
+                {logoBar ? <Logo type={item.value} /> : <h4>{item.value}</h4>}
               </div>
             );
           })}

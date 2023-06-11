@@ -1,66 +1,58 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 import MarqueeBar from './MarqueeBar';
 import { Icon } from './Icon';
 import { openInNewTab } from '@/utils';
 import { techSkillsData, softSkillsData } from '@/data/marqueeData';
 
+interface WrapperProps {
+  children: ReactNode;
+  link: string;
+}
+
+const StackWrapper: React.FC<WrapperProps> = ({ children, link }) => {
+  return (
+    <span className='clickable mx-2 md:mx-4' onClick={openInNewTab(link)}>
+      {children}
+    </span>
+  );
+};
+
 const SkillsSection = () => {
   return (
     <section className='flex flex-col items-center'>
       <div>
         <h2 className='text-gradient mb-5 text-center'>Tech Stack</h2>
-        <div className='flex flex-row justify-center items-center'>
-          <span
-            className='clickable mx-2 md:mx-4'
-            onClick={openInNewTab(
-              'https://developer.mozilla.org/en-US/docs/Web/HTML'
-            )}
-          >
-            <Icon.HTML5 />
-          </span>
-          <span
-            className='clickable mx-2 md:mx-4'
-            onClick={openInNewTab(
-              'https://developer.mozilla.org/en-US/docs/Web/CSS'
-            )}
-          >
-            <Icon.CSS3 />
-          </span>
-          <span
-            className='clickable mx-2 md:mx-4'
-            onClick={openInNewTab('https://nodejs.org/en')}
-          >
-            <Icon.NodeJS />
-          </span>
-          <span
-            className='clickable mx-2 md:mx-4'
-            onClick={openInNewTab('https://www.typescriptlang.org/')}
-          >
-            <Icon.TypeScript />
-          </span>
-          <span
-            className='clickable mx-2 md:mx-4'
-            onClick={openInNewTab('https://react.dev/')}
-          >
-            <Icon.ReactJS />
-          </span>
-          <span
-            className='clickable mx-2 md:mx-4'
-            onClick={openInNewTab('https://tailwindcss.com/')}
-          >
-            <Icon.TailwindCSS />
-          </span>
-          <span
-            className='clickable mx-2 md:mx-4'
-            onClick={openInNewTab('https://jestjs.io/')}
-          >
-            <Icon.Jest />
-          </span>
+        <div className='flex flex-col md:flex-row justify-center items-center'>
+          <div className='grid grid-cols-3 gap-4'>
+            <StackWrapper link='https://developer.mozilla.org/en-US/docs/Web/HTML'>
+              <Icon.HTML5 />
+            </StackWrapper>
+            <StackWrapper link='https://developer.mozilla.org/en-US/docs/Web/CSS'>
+              <Icon.CSS3 />
+            </StackWrapper>
+            <StackWrapper link='https://nodejs.org/en'>
+              <Icon.NodeJS />
+            </StackWrapper>
+          </div>
+          <div className='grid grid-cols-4 gap-4 mt-8 md:mt-0'>
+            <StackWrapper link='https://www.typescriptlang.org/'>
+              <Icon.TypeScript />
+            </StackWrapper>
+            <StackWrapper link='https://react.dev/'>
+              <Icon.ReactJS />
+            </StackWrapper>
+            <StackWrapper link='https://tailwindcss.com/'>
+              <Icon.TailwindCSS />
+            </StackWrapper>
+            <StackWrapper link='https://jestjs.io/'>
+              <Icon.Jest />
+            </StackWrapper>
+          </div>
         </div>
       </div>
-      <div className='flex flex-col mt-20 w-full '>
-        <h3 className='flex flex-row justify-start'>Other skills include</h3>
+      <div className='flex flex-col mt-28 w-full '>
+        <h3 className='flex flex-row justify-center'>Other skills include</h3>
         <div className='absolute w-full left-0'>
           <div className='flex relative'>
             <span className='mt-[2.5rem]'>

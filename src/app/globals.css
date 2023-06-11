@@ -26,23 +26,27 @@ body {
 }
 
 h1 {
-  @apply font-rubik font-semibold md:text-6xl text-4xl text-white;
+  @apply font-rubik font-semibold text-5xl;
 }
 
 h2 {
-  @apply font-rubik font-semibold md:text-4xl text-2xl text-white;
+  @apply font-rubik font-semibold text-4xl text-white;
 }
 
 h3 {
-  @apply font-rubik font-medium md:text-2xl text-xl text-white;
+  @apply font-rubik font-medium text-2xl text-white;
+}
+
+h4 {
+  @apply font-rubik font-medium text-xl;
 }
 
 p {
-  @apply font-rubik font-normal md:text-xl text-base leading-relaxed;
+  @apply font-rubik font-normal text-base leading-relaxed;
 }
 
 section {
-  @apply my-[10rem];
+  @apply my-32;
 }
 
 li {
