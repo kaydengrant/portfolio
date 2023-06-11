@@ -10,8 +10,8 @@ interface Props {
 
 const ProjectsSection = () => {
   return (
-    <section className='flex flex-col'>
-      <h2 className='mb-16'>Projects</h2>
+    <section className='flex flex-col mt-[20rem]'>
+      <h2 className='flex mb-16 justify-center md:justify-start'>Projects</h2>
       {projectData.map((item, i) => {
         return (
           <ProjectCard

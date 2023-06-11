@@ -31,7 +31,7 @@ const ProjectCard: React.FC<Props> = ({
       }`}
     >
       <div
-        className={`flex flex-col text-center max-w-[400px] ${
+        className={`flex flex-col text-center max-w-[325px] ${
           direction == 0 ? 'md:text-left' : 'md:text-right'
         }`}
       >
@@ -42,7 +42,7 @@ const ProjectCard: React.FC<Props> = ({
           <div className='w-full h-0.5 bg-white my-5' />
         )}
         <div
-          className={`flex flex-row ${
+          className={`flex flex-row justify-evenly md:${
             repoLink && demoLink
               ? 'justify-evenly'
               : direction == 0
@@ -62,7 +62,7 @@ const ProjectCard: React.FC<Props> = ({
           )}
         </div>
       </div>
-      <div className='flex w-[300px] h-[300px] justify-center items-center overflow-hidden shadow-gray shadow-sm rounded-2xl'>
+      <div className='flex w-[300px] h-[300px] justify-center items-center overflow-hidden shadow-gray shadow-sm rounded-2xl mb-8 md:mb-0'>
         <Image
           src={projectImage}
           alt='Project Image'
