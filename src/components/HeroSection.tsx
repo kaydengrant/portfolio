@@ -6,8 +6,8 @@ import { openInNewTab } from '@/utils';
 
 const HeroSection = () => {
   return (
-    <section className='flex flex-col items-center text-center'>
-      <div className='min-w-[300px]'>
+    <section className='flex flex-col items-center text-center mt-16'>
+      <div className='min-w-[350px]'>
         <ProfileBlob />
       </div>
       <h1 className='mt-10'>{'Kayden Grant'}</h1>

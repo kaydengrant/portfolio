@@ -1,6 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
-import { useSpring, animated, easings } from '@react-spring/web';
 
 const ProfileBlob = () => {
   return (
@@ -10,7 +8,7 @@ const ProfileBlob = () => {
         xmlns='http://www.w3.org/2000/svg'
         width='20%'
         id='blobSvg'
-        className='blur-2xl absolute z-[-1] min-w-[250px]'
+        className='md:blur-2xl blur-3xl absolute z-[-3] min-w-[250px]'
       >
         <defs>
           <linearGradient id='gradient' x1='0%' y1='0%' x2='0%' y2='100%'>
@@ -40,7 +38,7 @@ const ProfileBlob = () => {
         xmlns='http://www.w3.org/2000/svg'
         width='100%'
         id='blobSvg'
-        className='group transition-all select-none hover:scale-110'
+        className='group transition-all select-none hover:scale-110 z-[-2] md:z-0'
       >
         <defs>
           <linearGradient id='gradient' x1='0%' y1='0%' x2='0%' y2='100%'>
