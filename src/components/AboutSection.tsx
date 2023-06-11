@@ -8,10 +8,9 @@ const AboutSection = () => {
       <div className='flex flex-col items-center justify-center max-w-[80%] md:max-w-[50%] mt-14 md:mt-0'>
         <h2 className='text-gradient mb-5'>About me</h2>
         <p>
-          {`Hello, my name is Kayden and welcome to my portfolio! I'm a passionate Software Engineer who is
-          constantly focused on improving. I like to solve real-world problems
-          by developing creative solutions centered around user needs. And I also
-          enjoy working in diverse teams as I find they produce the best and most
+          {`Hello, my name is Kayden. I'm a passionate Software Engineer who is *something about web3*. 
+          I like to solve real-world problems by developing creative solutions centered around user needs.
+          I also enjoy working in diverse teams as I find they produce the best and most
           innovative ideas.`}
         </p>
         <p className='mt-3'>
