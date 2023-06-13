@@ -1,16 +1,11 @@
 import React from 'react';
 
-import ProjectCard from './ProjectCard';
+import ProjectCard from '../ProjectCard';
 import { projectData } from '@/data/projectData';
-import { DataProps } from '@/data/projectData';
-
-interface Props {
-  data: Array<DataProps>;
-}
 
 const ProjectsSection = () => {
   return (
-    <section className='flex flex-col mt-[20rem]'>
+    <section className='flex flex-col mt-[16rem]'>
       <h2 className='flex mb-16 justify-center md:justify-start'>Projects</h2>
       {projectData.map((item, i) => {
         return (
@@ -29,11 +24,5 @@ const ProjectsSection = () => {
     </section>
   );
 };
-// category: string;
-//   title: string;
-//   description: string;
-//   repoLink?: string;
-//   demoLink?: string;
-//   projectImage: any;
 
 export default ProjectsSection;

@@ -26,7 +26,7 @@ const ProjectCard: React.FC<Props> = ({
 }) => {
   return (
     <div
-      className={`flex flex-col-reverse justify-between items-center my-20 ${
+      className={`flex flex-col-reverse justify-between items-center mt-20 ${
         direction == 0 ? 'md:flex-row' : 'md:flex-row-reverse'
       }`}
     >

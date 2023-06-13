@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 
-import MarqueeBar from './MarqueeBar';
-import { Icon } from './Icon';
+import MarqueeBar from '../MarqueeBar';
+import { Icon } from '../Icon';
 import { openInNewTab } from '@/utils';
 import { techSkillsData, softSkillsData } from '@/data/marqueeData';
 

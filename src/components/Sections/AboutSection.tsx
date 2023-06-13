@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ShuffleEmoticon from './ShuffleEmoticon';
+import ShuffleEmoticon from '../ShuffleEmoticon';
 
 const AboutSection = () => {
   return (
