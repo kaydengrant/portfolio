@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+import { fontFamily } from 'tailwindcss/defaultTheme';
+
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -22,7 +25,7 @@ module.exports = {
         lg: '1024px',
       },
       fontFamily: {
-        rubik: 'Rubik',
+        rubik: ['var(--font-rubik)', fontFamily.sans],
       },
     },
   },
