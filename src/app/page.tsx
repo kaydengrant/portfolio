@@ -11,6 +11,7 @@ import ContactSection from '@/components/Sections/ContactSection';
 export default function Home() {
   return (
     <>
+      <title>Kayden Grant | Software Engineer</title>
       <Navigation />
       <div className='content-container'>
         <HeroSection />
