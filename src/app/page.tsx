@@ -20,7 +20,7 @@ export default function Home() {
         <ContactSection />
         <footer className='flex flex-col text-gray'>
           <div className='w-full h-0.5 bg-gray my-2' />
-          <p className='flex justify-end'>
+          <p className='flex justify-end text-sm'>
             © 2023 Kayden Grant. All rights reserved.
           </p>
         </footer>
