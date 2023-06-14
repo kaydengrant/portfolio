@@ -27,7 +27,6 @@ const ProjectsSection: React.FC = () => {
           return (
             <ProjectCard
               key={item.key}
-              category={item.category}
               title={item.title}
               description={item.description}
               repoLink={item.repoLink}

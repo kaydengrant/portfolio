@@ -7,7 +7,6 @@ import { Icon } from './Icon';
 import { openInNewTab } from '@/utils';
 
 type Props = {
-  category: string;
   title: string;
   description: string;
   repoLink?: string;
@@ -17,7 +16,6 @@ type Props = {
 };
 
 const ProjectCard: React.FC<Props> = ({
-  category,
   title,
   description,
   repoLink,
@@ -58,12 +56,9 @@ const ProjectCard: React.FC<Props> = ({
             direction == 0 ? 'md:text-left' : 'md:text-right'
           }`}
         >
-          <h4 className='text-gray font-normal'>{category}</h4>
           <h3 className='text-gradient mb-10'>{title}</h3>
           <p>{description}</p>
-          {(repoLink || demoLink) && (
-            <div className='w-full h-0.5 bg-white my-5' />
-          )}
+          <div className='w-full h-0.5 bg-white my-5' />
           <div
             className={`flex flex-row justify-evenly md:${
               repoLink && demoLink
@@ -83,6 +78,7 @@ const ProjectCard: React.FC<Props> = ({
                 <OutlineButton text='Demo' Tag={'h4'} icon={Icon.Arrow} />
               </span>
             )}
+            {!repoLink && !demoLink && <h4>Releasing soon</h4>}
           </div>
         </div>
         <div className='flex w-[300px] h-[300px] justify-center items-center overflow-hidden shadow-gray shadow-sm rounded-2xl mb-8 md:mb-0'>

@@ -1,6 +1,5 @@
 export type DataProps = {
   key: number;
-  category: string;
   title: string;
   description: string;
   repoLink?: string;
@@ -11,7 +10,6 @@ export type DataProps = {
 export const projectData: Array<DataProps> = [
   {
     key: 1,
-    category: 'School',
     title: 'Greenhouse Global Status',
     description:
       'A website for understanding global trends in regards to climate change using a heat-map of the world.',
@@ -22,7 +20,6 @@ export const projectData: Array<DataProps> = [
   },
   {
     key: 2,
-    category: 'Passion',
     title: 'Érgo Habit',
     description:
       'A mobile application for forming habits with analytics, achievements, and more.',
@@ -31,7 +28,6 @@ export const projectData: Array<DataProps> = [
   },
   {
     key: 3,
-    category: 'Work Experience',
     title: 'PitGuru',
     description: 'A racing overlay for racing simulation games.',
     projectImage: '/pitguruProjectImage.png',
