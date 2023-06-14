@@ -18,11 +18,11 @@
 }
 
 html {
-  @apply bg-black;
+  @apply bg-black scroll-smooth;
 }
 
 body {
-  @apply flex flex-col items-center min-w-full text-white;
+  @apply flex flex-col items-center min-w-full text-white overflow-x-hidden;
 }
 
 h1 {
@@ -46,7 +46,7 @@ p {
 }
 
 section {
-  @apply my-32;
+  @apply my-[9rem];
 }
 
 li {
