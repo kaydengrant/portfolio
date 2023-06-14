@@ -1,4 +1,4 @@
-export interface DataProps {
+export type DataProps = {
   key: number;
   category: string;
   title: string;
@@ -6,7 +6,7 @@ export interface DataProps {
   repoLink?: string;
   demoLink?: string;
   projectImage: any;
-}
+};
 
 export const projectData: Array<DataProps> = [
   {

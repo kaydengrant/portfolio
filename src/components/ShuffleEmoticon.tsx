@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { animated, useSpring } from '@react-spring/web';
 import Image from 'next/image';
+import { animated, useSpring } from '@react-spring/web';
 
 import Hand from '/public/hand.svg';
 import Coffee from '/public/coffee.svg';
 import Computer from '/public/computer.svg';
 import Cog from '/public/cog.svg';
 
-interface DataProps {
+type DataProps = {
   key: number;
   icon: any;
   anim: any;
-}
+};
 
-const ShuffleEmoticon = () => {
+const ShuffleEmoticon: React.FC = () => {
   const [index, setIndex] = useState(0);
 
   const handleIndex = () => {
@@ -29,7 +29,6 @@ const ShuffleEmoticon = () => {
     to: { transform: 'rotate(30deg)' },
     loop: { reverse: true },
     config: {
-      mass: 1,
       tension: 20,
       friction: 10,
     },
@@ -45,7 +44,6 @@ const ShuffleEmoticon = () => {
     loop: true,
     delay: 500,
     config: {
-      mass: 1,
       tension: 500,
       friction: 10,
     },
@@ -63,15 +61,15 @@ const ShuffleEmoticon = () => {
   });
 
   const emoticonData: Array<DataProps> = [
-    { key: 0, icon: Hand, anim: handAnim },
-    { key: 1, icon: Coffee, anim: coffeeAnim },
+    { key: 0, icon: Coffee, anim: coffeeAnim },
+    { key: 1, icon: Hand, anim: handAnim },
     { key: 2, icon: Cog, anim: cogAnim },
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       handleIndex();
-    }, 8000);
+    }, 6000);
     return () => clearInterval(interval);
   });
 
@@ -80,11 +78,11 @@ const ShuffleEmoticon = () => {
       {emoticonData.slice(index, index + 1).map((item) => {
         return (
           <div key={item.key} onClick={handleIndex}>
-            {index == 2 ? (
+            {index == 2 && (
               <div className='flex justify-center'>
                 <Image src={Computer} alt='' className='absolute' />
               </div>
-            ) : undefined}
+            )}
             <animated.div style={item.anim}>
               <Image src={item.icon} alt='' />
             </animated.div>

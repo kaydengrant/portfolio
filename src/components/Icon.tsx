@@ -1,12 +1,12 @@
 import React, { ReactNode } from 'react';
 
-interface IconMap {
+type IconMap = {
   [key: string]: () => React.JSX.Element;
-}
+};
 
-interface WrapperProps {
+type WrapperProps = {
   children: ReactNode;
-}
+};
 
 const IconWrapper: React.FC<WrapperProps> = ({ children }) => {
   return (

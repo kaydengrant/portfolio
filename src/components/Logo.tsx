@@ -1,16 +1,16 @@
 import React, { ReactNode } from 'react';
 
-interface LogoProps {
+type LogoProps = {
   type: string;
-}
+};
 
-interface LogoMap {
+type LogoMap = {
   [key: string]: () => React.JSX.Element;
-}
+};
 
-interface WrapperProps {
+type WrapperProps = {
   children: ReactNode;
-}
+};
 
 const LogoWrapperSmall: React.FC<WrapperProps> = ({ children }) => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProfileBlob = () => {
+const ProfileBlob: React.FC = () => {
   return (
     <div className='flex justify-center items-center group-hover:transition-all group-hover:select-none group-hover:scale-110'>
       <svg

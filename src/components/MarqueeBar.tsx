@@ -5,11 +5,11 @@ import { Logo } from './Logo';
 import { DataProps } from '@/data/marqueeData';
 import { openInNewTab } from '@/utils';
 
-interface Props {
+type Props = {
   data: Array<DataProps>;
   direction: 'left' | 'right';
   logoBar: boolean;
-}
+};
 
 const MarqueeBar: React.FC<Props> = ({ data, direction, logoBar }) => {
   return (

@@ -1,8 +1,8 @@
-export interface DataProps {
+export type DataProps = {
   key: number;
   value: string;
   link: string;
-}
+};
 
 export const techSkillsData: Array<DataProps> = [
   { key: 1, value: 'NextJS', link: 'https://nextjs.org/' },
