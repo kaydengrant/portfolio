@@ -50,7 +50,7 @@ const ContactSection: React.FC = () => {
     })
       .then(() => {
         alert(
-          `Email sent successfully! I'll get back to you as soon as I can.`
+          `Email sent successfully! I'll get back to you as soon as I can. Thanks!`
         );
       })
       .catch((err) => {
