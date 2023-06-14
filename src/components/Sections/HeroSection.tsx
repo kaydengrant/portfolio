@@ -1,12 +1,29 @@
 import React from 'react';
-import { Icon } from '../Icon';
+import { animated, useInView, useSpring } from '@react-spring/web';
 
 import ProfileBlob from '../ProfileBlob';
+import { Icon } from '../Icon';
 import { openInNewTab } from '@/utils';
 
-const HeroSection = () => {
+const HeroSection: React.FC = () => {
+  const [heroRef, inView] = useInView({
+    once: true,
+  });
+
+  const showSectionAnim = useSpring({
+    opacity: inView ? 1 : 0,
+    config: {
+      mass: 20,
+      friction: 100,
+    },
+  });
+
   return (
-    <section className='flex flex-col items-center text-center mt-16'>
+    <animated.section
+      ref={heroRef}
+      style={showSectionAnim}
+      className='flex flex-col items-center text-center mt-16'
+    >
       <div className='min-w-[350px]'>
         <ProfileBlob />
       </div>
@@ -26,7 +43,7 @@ const HeroSection = () => {
           <Icon.Linkedin />
         </span>
       </div>
-    </section>
+    </animated.section>
   );
 };
 

@@ -1,23 +1,55 @@
 import React from 'react';
+import { useInView, animated, useSpring } from '@react-spring/web';
 
 import ShuffleEmoticon from '../ShuffleEmoticon';
 
-const AboutSection = () => {
+const AboutSection: React.FC = () => {
+  const [aboutRef, inView] = useInView({
+    once: true,
+  });
+
+  const slideLeftAnim = useSpring({
+    opacity: inView ? 1 : 0,
+    x: inView ? '0px' : '-100vw',
+    config: {
+      friction: 50,
+    },
+  });
+
+  const slideRightAnim = useSpring({
+    opacity: inView ? 1 : 0,
+    x: inView ? '0px' : '100vw',
+    config: {
+      friction: 50,
+    },
+  });
+
   return (
-    <section className='flex flex-col-reverse items-center md:flex-row md:justify-around'>
-      <div className='flex flex-col items-center justify-center max-w-[80%] md:max-w-[45%] mt-14 md:mt-0'>
-        <h2 className='text-gradient mb-5'>About me</h2>
-        <p>
-          {`Welcome to my portfolio! I'm a dedicated Software Engineer who enjoys tackling real-world challenges  
-          through developing creative solutions centered around user needs. I value working in diverse teams as I  
-          believe they produce the best and most innovative ideas.`}
-        </p>
-        <p className='mt-3'>
-          {`In my freetime I'm likely hanging out with my cat or working on personal projects.`}
-        </p>
-      </div>
-      <ShuffleEmoticon />
-    </section>
+    <>
+      <span id='About' className='invisible' />
+      <section
+        ref={aboutRef}
+        className='flex flex-col-reverse items-center md:flex-row md:justify-around'
+      >
+        <animated.div
+          style={slideLeftAnim}
+          className='flex flex-col items-center justify-center max-w-[80%] text-center md:text-left md:max-w-[45%] mt-14 md:mt-0'
+        >
+          <h2 className='text-gradient mb-5'>About me</h2>
+          <p>
+            {`Welcome to my portfolio! I'm a dedicated Software Engineer who enjoys tackling real-world challenges  
+          through developing creative solutions centered around user needs. I value collaborating in diverse teams 
+          as I believe they produce the most innovative ideas.`}
+          </p>
+          <p className='mt-3'>
+            {`In my freetime I'm hanging out with my cat or working on personal projects.`}
+          </p>
+        </animated.div>
+        <animated.div style={slideRightAnim}>
+          <ShuffleEmoticon />
+        </animated.div>
+      </section>
+    </>
   );
 };
 
