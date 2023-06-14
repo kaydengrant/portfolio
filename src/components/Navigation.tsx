@@ -9,14 +9,15 @@ const Navigation: React.FC = () => {
 
   const hamburgerNavAnim = useSpring({
     top: isOpen ? '72px' : '-200px',
-    zIndex: isOpen && 0,
   });
 
   return (
     <nav className='relative w-full bg-darkGray flex items-center py-3 px-5 justify-end md:justify-center'>
       <animated.ul
         style={hamburgerNavAnim}
-        className='absolute z-[-1] left-0 bg-darkGray border-t-4 border-white flex flex-col w-full max-w-[1000px] md:z-0 md:border-0 md:static md:flex-row justify-between md:items-center'
+        className={`absolute ${
+          isOpen ? 'z-0' : 'z-[-1]'
+        } left-0 bg-darkGray border-t-4 border-white flex flex-col w-full max-w-[1000px] md:z-0 md:border-0 md:static md:flex-row justify-between md:items-center`}
       >
         <ul className='flex flex-col md:flex-row'>
           <li onClick={() => setOpen(false)}>
