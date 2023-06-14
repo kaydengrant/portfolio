@@ -1,10 +1,10 @@
 import React from 'react';
 
-interface Props {
+type Props = {
   text: string;
-  Tag: React.ElementType;
+  Tag: any;
   icon?: any;
-}
+};
 
 const OutlineButton: React.FC<Props> = ({ text, Tag, icon }) => {
   return (
