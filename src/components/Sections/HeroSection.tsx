@@ -29,7 +29,7 @@ const HeroSection: React.FC = () => {
       </div>
       <h1 className='mt-10'>{'Kayden Grant'}</h1>
       <h3 className='text-gradient my-5'>Software Engineer based in Seattle</h3>
-      <div className='flex flex-row justify-center gap-8'>
+      <div className='flex flex-row justify-center gap-6'>
         <span
           className='clickable'
           onClick={openInNewTab('https://github.com/kaydengrant')}

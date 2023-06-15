@@ -142,7 +142,7 @@ const ContactSection: React.FC = () => {
             </h4>
             <p>Or contact me via email at: kagrant@uw.edu</p>
           </div>
-          <div className='flex justify-center mb-16 md:mb-0 md:justify-end gap-8'>
+          <div className='flex justify-center mb-16 md:mb-0 md:justify-end gap-6'>
             <span
               className='clickable'
               onClick={openInNewTab('https://github.com/kaydengrant')}
