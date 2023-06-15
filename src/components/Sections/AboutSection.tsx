@@ -33,15 +33,15 @@ const AboutSection: React.FC = () => {
       >
         <animated.div
           style={slideLeftAnim}
-          className='flex flex-col items-center justify-center max-w-[80%] text-center md:text-left md:max-w-[45%] mt-14 md:mt-0'
+          className='flex flex-col justify-center max-w-[80%] text-center md:text-left md:max-w-[50%] mt-14 md:mt-0'
         >
           <h2 className='text-gradient mb-5'>About me</h2>
-          <p>
-            {`Welcome to my portfolio! I'm a dedicated Software Engineer who enjoys tackling real-world challenges  
+          <p className='font-normal'>
+            {`I'm a dedicated Software Engineer who enjoys tackling real-world challenges  
           through developing creative solutions centered around user needs. I value collaborating in diverse teams 
           as I believe they produce the most innovative ideas.`}
           </p>
-          <p className='mt-3'>
+          <p className='font-normal mt-3'>
             {`In my freetime I'm hanging out with my cat or working on personal projects.`}
           </p>
         </animated.div>
