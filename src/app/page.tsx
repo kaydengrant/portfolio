@@ -7,6 +7,7 @@ import AboutSection from '@/components/Sections/AboutSection';
 import SkillsSection from '@/components/Sections/SkillsSection';
 import ProjectsSection from '@/components/Sections/ProjectsSection';
 import ContactSection from '@/components/Sections/ContactSection';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -19,12 +20,7 @@ export default function Home() {
         <SkillsSection />
         <ProjectsSection />
         <ContactSection />
-        <footer className='flex flex-col text-gray'>
-          <div className='w-full h-0.5 bg-gray my-2' />
-          <p className='flex justify-end text-sm'>
-            © 2023 Kayden Grant. All rights reserved.
-          </p>
-        </footer>
+        <Footer />
       </div>
     </>
   );
