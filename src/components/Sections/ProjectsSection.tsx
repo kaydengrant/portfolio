@@ -20,9 +20,9 @@ const ProjectsSection: React.FC = () => {
         id='Projects'
         ref={projectsRef}
         style={showSectionAnim}
-        className='flex flex-col mt-[14rem] mb-24'
+        className='flex flex-col mt-[22rem] mb-24'
       >
-        <h2 className='flex mb-10 justify-center md:justify-start'>Projects</h2>
+        <h2 className='flex justify-center md:justify-start'>Projects</h2>
         {projectData.map((item, i) => {
           return (
             <ProjectCard
