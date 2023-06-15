@@ -25,8 +25,12 @@ body {
   @apply flex flex-col items-center min-w-full text-white overflow-x-hidden;
 }
 
+section {
+  @apply my-[9rem];
+}
+
 h1 {
-  @apply font-rubik font-semibold text-5xl text-white;
+  @apply font-rubik font-semibold text-5xl text-white leading-10;
 }
 
 h2 {
@@ -34,7 +38,7 @@ h2 {
 }
 
 h3 {
-  @apply font-rubik font-medium text-2xl text-white;
+  @apply font-rubik font-semibold text-2xl text-white;
 }
 
 h4 {
@@ -42,11 +46,7 @@ h4 {
 }
 
 p {
-  @apply font-rubik font-normal text-base leading-relaxed;
-}
-
-section {
-  @apply my-[9rem];
+  @apply font-rubik font-normal text-base leading-7;
 }
 
 li {
