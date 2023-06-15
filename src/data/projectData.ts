@@ -29,7 +29,8 @@ export const projectData: Array<DataProps> = [
   {
     key: 3,
     title: 'PitGuru',
-    description: 'A racing overlay for racing simulation games.',
+    description:
+      'A highly customizable racing overlay for racing simulation games.',
     projectImage: '/pitguruProjectImage.png',
   },
 ];
