@@ -9,7 +9,7 @@
   }
 
   .clickable {
-    @apply cursor-pointer transition-all select-none hover:scale-110 hover:text-lightGreen;
+    @apply cursor-pointer transition-all select-none hover:scale-110 hover:text-lightGreen active:brightness-125;
   }
 
   .text-gradient {
