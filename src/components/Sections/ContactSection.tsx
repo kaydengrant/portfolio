@@ -143,7 +143,7 @@ const ContactSection: React.FC = () => {
             <div>
               <p>Or contact me via email:</p>
               <span
-                className='flex flex-row justify-end items-center gap-2 clickable'
+                className='flex flex-row clickable justify-center items-center gap-2 md:justify-end '
                 onClick={() => {
                   navigator.clipboard.writeText('kaydenagrant@gmail.com');
                 }}
