@@ -140,7 +140,18 @@ const ContactSection: React.FC = () => {
               {`Fill out the form provided and I'll get back to you in the next 24-48
           hours.`}
             </h4>
-            <p>Or contact me via email at: kagrant@uw.edu</p>
+            <div>
+              <p>Or contact me via email:</p>
+              <span
+                className='flex flex-row justify-end items-center gap-2 clickable'
+                onClick={() => {
+                  navigator.clipboard.writeText('kaydenagrant@gmail.com');
+                }}
+              >
+                <p className='font-semibold'>kaydenagrant@gmail.com</p>
+                <Icon.Copy />
+              </span>
+            </div>
           </div>
           <div className='flex justify-center mb-16 md:mb-0 md:justify-end gap-6'>
             <span
