@@ -14,7 +14,7 @@ export async function POST(req: Request) {
   `;
 
   const mailData = {
-    to: 'kagrant@uw.edu',
+    to: 'kaydenagrant@gmail.com',
     from: 'portfolio@kaydengrant.com',
     subject: 'New inquiry from ' + name,
     text: message,
