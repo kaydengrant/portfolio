@@ -60,7 +60,7 @@ const ProjectCard: React.FC<Props> = ({
           <p>{description}</p>
           <div className='w-full h-0.5 bg-white my-5' />
           <div
-            className={`flex flex-row justify-evenly md:${
+            className={`flex flex-row gap-2 justify-evenly md:${
               repoLink && demoLink
                 ? 'justify-evenly'
                 : direction == 0
@@ -81,12 +81,11 @@ const ProjectCard: React.FC<Props> = ({
             {!repoLink && !demoLink && <h4>Releasing soon</h4>}
           </div>
         </div>
-        <div className='flex w-[300px] h-[300px] justify-center items-center overflow-hidden shadow-gray shadow-sm rounded-2xl mb-8 md:mb-0'>
+        <div className='relative flex w-[300px] h-[300px] justify-center items-center overflow-hidden shadow-gray shadow-sm rounded-2xl mb-8 md:mb-0'>
           <Image
             src={projectImage}
             alt='Project Image'
-            width={300}
-            height={300}
+            fill
             quality={100}
             className='object-cover'
           />
