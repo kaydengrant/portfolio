@@ -71,7 +71,7 @@ const SkillsSection: React.FC = () => {
           </div>
         </div>
         <div className='flex flex-col mt-28 w-full '>
-          <h3 className='flex flex-row justify-center'>Other skills include</h3>
+          <h3 className='flex flex-row justify-center'>Other Skills Include</h3>
           <div className='absolute w-full left-0'>
             <div className='flex relative'>
               <span className='mt-[2.5rem]'>

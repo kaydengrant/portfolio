@@ -35,7 +35,7 @@ const AboutSection: React.FC = () => {
           style={slideLeftAnim}
           className='flex flex-col justify-center max-w-[80%] text-center md:text-left md:max-w-[50%] mt-14 md:mt-0'
         >
-          <h2 className='text-gradient mb-5'>About me</h2>
+          <h2 className='text-gradient mb-5'>About Me</h2>
           <p className='font-normal'>
             {`I'm a dedicated Software Engineer who enjoys tackling real-world challenges  
           through developing creative solutions centered around user needs. I value collaborating in diverse teams 

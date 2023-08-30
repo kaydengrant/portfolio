@@ -131,9 +131,9 @@ const ContactSection: React.FC = () => {
           style={slideRightAnim}
           className='flex flex-col text-center w-[80%] md:w-[40%] md:text-right gap-8'
         >
-          <h1>
-            {`Let's work `}
-            <span className='text-gradient'>together</span>
+          <h1 className='leading-10'>
+            {`Let's Work `}
+            <span className='text-gradient leading-[4.5rem]'>Together</span>
           </h1>
           <div className='flex flex-col gap-4'>
             <h4 className='font-normal'>
@@ -141,7 +141,6 @@ const ContactSection: React.FC = () => {
           hours.`}
             </h4>
             <div>
-              <p>Or contact me via email:</p>
               <span
                 className='flex flex-row clickable justify-center items-center gap-2 md:justify-end '
                 onClick={() => {
