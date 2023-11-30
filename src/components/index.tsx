@@ -8,6 +8,7 @@ import SectionHeader from './SectionHeader';
 import Footer from './Footer';
 import IconButton from './Buttons/IconButton';
 import OutlineButton from './Buttons/OutlineButton';
+import ThemeButton from './Buttons/ThemeButton';
 import ShuffleEmoticon from './ShuffleEmoticon';
 import ProfileBlob from './ProfileBlob';
 
@@ -22,6 +23,7 @@ export {
   Footer,
   IconButton,
   OutlineButton,
+  ThemeButton,
   ShuffleEmoticon,
   ProfileBlob,
 };

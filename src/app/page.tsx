@@ -10,10 +10,11 @@ import {
   Navigation,
   Footer,
 } from '../components';
+import { ThemeProvider } from 'next-themes';
 
 export default function Home() {
   return (
-    <>
+    <ThemeProvider attribute='class'>
       <title>Kayden Grant | Software Engineer</title>
       <Navigation />
       <div className='content-container'>
@@ -24,6 +25,6 @@ export default function Home() {
         <Contact />
         <Footer />
       </div>
-    </>
+    </ThemeProvider>
   );
 }

@@ -1,18 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { PiMoonFill, PiSunBold } from 'react-icons/pi';
+import React, { useState } from 'react';
 import { MdClose, MdDehaze } from 'react-icons/md';
 
-import { IconButton } from '.';
+import { IconButton, ThemeButton } from '.';
 
 const Navigation: React.FC = () => {
   const [isOpen, setOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(true);
-
-  useEffect(() => {
-    darkMode
-      ? document.documentElement.classList.add('dark')
-      : document.documentElement.classList.remove('dark');
-  }, [darkMode]);
 
   return (
     <nav
@@ -47,15 +39,7 @@ const Navigation: React.FC = () => {
           }`}
         />
         <div className='flex flex-row w-full md:w-min justify-end items-center gap-4'>
-          <div onClick={() => setDarkMode(!darkMode)}>
-            <IconButton
-              icon={
-                darkMode ? <PiSunBold size={20} /> : <PiMoonFill size={20} />
-              }
-              bgColor='bg-[#752AB7] dark:bg-[#EFC069]'
-              iconColor='text-white dark:text-darkGray'
-            />
-          </div>
+          <ThemeButton />
           <div className='md:hidden'>
             <IconButton
               icon={isOpen ? <MdClose size={20} /> : <MdDehaze size={20} />}
