@@ -1,25 +1,33 @@
-import React, { useState } from 'react';
-import { animated, useSpring } from '@react-spring/web';
-import { Twirl as Hamburger } from 'hamburger-react';
+import React, { useEffect, useState } from 'react';
+import { PiMoonFill, PiSunBold } from 'react-icons/pi';
+import { MdClose, MdDehaze } from 'react-icons/md';
 
-import OutlineButton from './Buttons/OutlineButton';
+import { IconButton } from '.';
 
 const Navigation: React.FC = () => {
   const [isOpen, setOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
-  const hamburgerNavAnim = useSpring({
-    top: isOpen ? '72px' : '-200px',
-  });
+  useEffect(() => {
+    darkMode
+      ? document.documentElement.classList.add('dark')
+      : document.documentElement.classList.remove('dark');
+  }, [darkMode]);
 
   return (
-    <nav className='relative w-full bg-darkGray flex items-center py-3 px-5 justify-end md:justify-center'>
-      <animated.ul
-        style={hamburgerNavAnim}
-        className={`absolute ${
-          isOpen ? 'z-0' : 'z-[-1]'
-        } left-0 bg-darkGray border-t-4 border-white flex flex-col w-full max-w-[1000px] md:z-0 md:border-0 md:static md:flex-row justify-between md:items-center`}
+    <nav
+      className={`fixed w-screen bg-offwhite dark:bg-black z-[100] ${
+        isOpen ? 'h-screen' : ''
+      }`}
+    >
+      <div
+        className={`relative w-full flex flex-col-reverse md:flex-row items-center py-3 px-6 justify-end md:justify-center`}
       >
-        <ul className='flex flex-col md:flex-row'>
+        <ul
+          className={`${
+            isOpen ? 'flex mt-4' : 'hidden md:flex'
+          } flex-col md:flex-row w-full max-w-[1000px] md:items-center`}
+        >
           <li onClick={() => setOpen(false)}>
             <a href='#About'>About</a>
           </li>
@@ -29,16 +37,36 @@ const Navigation: React.FC = () => {
           <li onClick={() => setOpen(false)}>
             <a href='#Projects'>Projects</a>
           </li>
+          <li onClick={() => setOpen(false)}>
+            <a href='#Contact'>Contact</a>
+          </li>
         </ul>
-        <li onClick={() => setOpen(false)}>
-          <a href='#Contact' className='hover:no-underline'>
-            <OutlineButton text='Get in Touch' Tag={'h4'} />
-          </a>
-        </li>
-      </animated.ul>
-      <div className='md:hidden'>
-        <Hamburger toggled={isOpen} toggle={setOpen} size={40} rounded />
+        <div
+          className={`bg-gray w-screen h-0.5 my-3 ${
+            isOpen ? 'flex' : 'hidden'
+          }`}
+        />
+        <div className='flex flex-row w-full md:w-min justify-end items-center gap-4'>
+          <div onClick={() => setDarkMode(!darkMode)}>
+            <IconButton
+              icon={
+                darkMode ? <PiSunBold size={20} /> : <PiMoonFill size={20} />
+              }
+              bgColor='bg-[#752AB7] dark:bg-[#EFC069]'
+              iconColor='text-white dark:text-darkGray'
+            />
+          </div>
+          <div className='md:hidden'>
+            <IconButton
+              icon={isOpen ? <MdClose size={20} /> : <MdDehaze size={20} />}
+              bgColor='bg-black'
+              iconColor='text-white'
+              onClick={() => setOpen(!isOpen)}
+            />
+          </div>
+        </div>
       </div>
+      <div className={`bg-gray w-screen h-0.5 ${isOpen ? 'hidden' : 'flex'}`} />
     </nav>
   );
 };

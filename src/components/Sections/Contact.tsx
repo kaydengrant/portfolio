@@ -1,9 +1,16 @@
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useInView, useSpring, animated } from '@react-spring/web';
+import {
+  FaArrowRight,
+  FaCopy,
+  FaGithub,
+  FaLink,
+  FaLinkedin,
+  FaTwitter,
+} from 'react-icons/fa';
 
 import OutlineButton from '../Buttons/OutlineButton';
-import { Icon } from '../Icon';
 import { openInNewTab } from '@/utils';
 
 type ContactForm = {
@@ -12,7 +19,7 @@ type ContactForm = {
   inquiry: string;
 };
 
-const ContactSection: React.FC = () => {
+const Contact: React.FC = () => {
   const [contactRef, inView] = useInView({
     once: true,
   });
@@ -87,7 +94,7 @@ const ContactSection: React.FC = () => {
                 required: true,
               })}
             />
-            <div className='text-red'>
+            <div className='text-error'>
               {errors.name?.type == 'required' && <p>Your name is required</p>}
             </div>
           </span>
@@ -100,7 +107,7 @@ const ContactSection: React.FC = () => {
               placeholder='JaneSmith@email.com'
               {...register('email', { required: true, pattern: /^.+@.+\..+$/ })}
             />
-            <div className='text-red'>
+            <div className='text-error'>
               {errors.email?.type == 'required' && <p>Email is required</p>}
               {errors.email?.type == 'pattern' && (
                 <p>Must use a valid email address</p>
@@ -117,14 +124,18 @@ const ContactSection: React.FC = () => {
               placeholder='Type about your company, team, and/or project.'
               {...register('inquiry', { required: true })}
             />
-            <div className='text-red'>
+            <div className='text-error'>
               {errors.inquiry?.type == 'required' && (
                 <p>Your inquiry is required</p>
               )}
             </div>
           </span>
-          <div className='flex justify-center md:justify-end'>
-            <OutlineButton text='Submit' Tag={'h4'} icon={Icon.Arrow} />
+          <div className='flex justify-center'>
+            <OutlineButton
+              text='Submit'
+              Tag={'h4'}
+              icon={<FaArrowRight size={20} />}
+            />
           </div>
         </animated.form>
         <animated.div
@@ -133,37 +144,32 @@ const ContactSection: React.FC = () => {
         >
           <h1 className='leading-10'>
             {`Let's Work `}
-            <span className='text-gradient leading-[4.5rem]'>Together</span>
-          </h1>
-          <div className='flex flex-col gap-4'>
-            <h4 className='font-normal'>
-              {`Fill out the form provided and I'll get back to you in the next 24-48
-          hours.`}
-            </h4>
-            <div>
-              <span
-                className='flex flex-row clickable justify-center items-center gap-2 md:justify-end '
-                onClick={() => {
-                  navigator.clipboard.writeText('kaydenagrant@gmail.com');
-                }}
-              >
-                <p className='font-semibold'>kaydenagrant@gmail.com</p>
-                <Icon.Copy />
-              </span>
-            </div>
-          </div>
-          <div className='flex justify-center mb-16 md:mb-0 md:justify-end gap-6'>
-            <span
-              className='clickable'
-              onClick={openInNewTab('https://github.com/kaydengrant')}
-            >
-              <Icon.Github />
+            <span className='text-darkGreen dark:text-green leading-[4.5rem]'>
+              Together
             </span>
+          </h1>
+          <h4 className='font-normal'>
+            {`Fill out the form provided and I'll get back to you in the next 48
+          hours.`}
+          </h4>
+          <div className='flex justify-center mb-16 md:mb-0 md:justify-end gap-6'>
             <span
               className='clickable'
               onClick={openInNewTab('https://www.linkedin.com/in/kaydengrant/')}
             >
-              <Icon.Linkedin />
+              <FaLinkedin size={40} />
+            </span>
+            <span
+              className='clickable'
+              onClick={openInNewTab('https://github.com/kaydengrant')}
+            >
+              <FaGithub size={40} />
+            </span>
+            <span
+              className='clickable'
+              onClick={openInNewTab('https://twitter.com/kaydengr')}
+            >
+              <FaTwitter size={40} />
             </span>
           </div>
         </animated.div>
@@ -172,4 +178,4 @@ const ContactSection: React.FC = () => {
   );
 };
 
-export default ContactSection;
+export default Contact;

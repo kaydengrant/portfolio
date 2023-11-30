@@ -1,11 +1,11 @@
 import React from 'react';
 import { animated, useInView, useSpring } from '@react-spring/web';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
-import ProfileBlob from '../ProfileBlob';
-import { Icon } from '../Icon';
+import { ProfileBlob } from '..';
 import { openInNewTab } from '@/utils';
 
-const HeroSection: React.FC = () => {
+const Hero: React.FC = () => {
   const [heroRef, inView] = useInView({
     once: true,
   });
@@ -22,29 +22,37 @@ const HeroSection: React.FC = () => {
     <animated.section
       ref={heroRef}
       style={showSectionAnim}
-      className='flex flex-col items-center text-center mt-16'
+      className='flex flex-col items-center text-center gap-6'
     >
       <div className='min-w-[350px]'>
         <ProfileBlob />
       </div>
-      <h1 className='mt-10'>{'Kayden Grant'}</h1>
-      <h3 className='text-gradient my-5'>Software Engineer based in Seattle</h3>
+      <h1 className='text-black dark:text-white'>Kayden Grant</h1>
+      <h3 className='text-darkGreen dark:text-green'>
+        Software Engineer based in Seattle
+      </h3>
       <div className='flex flex-row justify-center gap-6'>
-        <span
-          className='clickable'
-          onClick={openInNewTab('https://github.com/kaydengrant')}
-        >
-          <Icon.Github />
-        </span>
         <span
           className='clickable'
           onClick={openInNewTab('https://www.linkedin.com/in/kaydengrant/')}
         >
-          <Icon.Linkedin />
+          <FaLinkedin size={40} />
+        </span>
+        <span
+          className='clickable'
+          onClick={openInNewTab('https://github.com/kaydengrant')}
+        >
+          <FaGithub size={40} />
+        </span>
+        <span
+          className='clickable'
+          onClick={openInNewTab('https://twitter.com/kaydengr')}
+        >
+          <FaTwitter size={40} />
         </span>
       </div>
     </animated.section>
   );
 };
 
-export default HeroSection;
+export default Hero;
