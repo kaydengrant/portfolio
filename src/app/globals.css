@@ -9,36 +9,36 @@
   }
 
   .clickable {
-    @apply cursor-pointer transition-all select-none hover:scale-110 hover:text-lightGreen active:brightness-125;
+    @apply cursor-pointer transition-all select-none hover:scale-110 hover:text-darkGreen hover:dark:text-green hover:border-darkGreen hover:dark:border-green active:brightness-125;
   }
 
   .text-gradient {
-    @apply text-opacity-0 bg-clip-text bg-gradient-to-tr from-green to-lightGreen text-white;
+    @apply text-error;
   }
 }
 
 html {
-  @apply bg-black scroll-smooth;
+  @apply scroll-smooth;
 }
 
 body {
-  @apply flex flex-col items-center min-w-full text-white overflow-x-hidden;
+  @apply flex flex-col items-center min-w-full bg-offwhite text-black dark:bg-black dark:text-white overflow-x-hidden;
 }
 
 section {
-  @apply my-[9rem];
+  @apply my-16;
 }
 
 h1 {
-  @apply font-rubik font-semibold text-5xl text-white leading-10;
+  @apply font-rubik font-semibold text-5xl leading-10;
 }
 
 h2 {
-  @apply font-rubik font-semibold text-4xl text-white;
+  @apply font-rubik font-semibold text-4xl;
 }
 
 h3 {
-  @apply font-rubik font-semibold text-2xl text-white;
+  @apply font-rubik font-semibold text-2xl;
 }
 
 h4 {
@@ -49,19 +49,19 @@ p {
   @apply font-rubik font-normal text-base leading-7;
 }
 
-li {
-  @apply mx-4 my-4 md:my-0;
+ul {
+  @apply gap-6;
 }
 
 a {
   @apply clickable hover:underline hover:underline-offset-4;
 }
 
-button {
+button &:not(.disable) {
   @apply clickable;
 }
 
 form input,
 form textarea {
-  @apply bg-darkGray text-white border-solid border-2 border-white p-2 rounded-md focus:border-lightGreen outline-none;
+  @apply bg-white dark:bg-darkGray text-black dark:text-white border-solid border-2 border-black dark:border-white p-2 rounded-md focus:border-darkGreen focus:dark:border-green outline-none;
 }
