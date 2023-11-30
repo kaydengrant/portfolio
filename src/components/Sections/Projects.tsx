@@ -60,7 +60,7 @@ const Projects: React.FC = () => {
                   <div className='w-full h-0.5 bg-black dark:bg-white' />
                   <ul className='flex flex-row gap-4'>
                     {project.tools.map((tool: any, index: number) => (
-                      <li key={index}>{tool}</li>
+                      <li key={tool.key}>{tool}</li>
                     ))}
                   </ul>
                 </div>
