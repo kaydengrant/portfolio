@@ -19,39 +19,40 @@ const Hero: React.FC = () => {
   });
 
   return (
-    <animated.section
-      ref={heroRef}
-      style={showSectionAnim}
-      className='flex flex-col items-center text-center gap-6'
-    >
-      <div className='min-w-[350px]'>
-        <ProfileBlob />
-      </div>
-      <h1 className='text-black dark:text-white'>Kayden Grant</h1>
-      <h3 className='text-darkGreen dark:text-green'>
-        Software Engineer based in Seattle
-      </h3>
-      <div className='flex flex-row justify-center gap-6'>
-        <span
-          className='clickable'
-          onClick={openInNewTab('https://www.linkedin.com/in/kaydengrant/')}
-        >
-          <FaLinkedin size={40} />
-        </span>
-        <span
-          className='clickable'
-          onClick={openInNewTab('https://github.com/kaydengrant')}
-        >
-          <FaGithub size={40} />
-        </span>
-        <span
-          className='clickable'
-          onClick={openInNewTab('https://twitter.com/kaydengr')}
-        >
-          <FaTwitter size={40} />
-        </span>
-      </div>
-    </animated.section>
+    <animated.div style={showSectionAnim}>
+      <section
+        ref={heroRef}
+        className='flex flex-col items-center text-center gap-6'
+      >
+        <div className='min-w-[350px]'>
+          <ProfileBlob />
+        </div>
+        <h1 className='text-black dark:text-white'>Kayden Grant</h1>
+        <h3 className='text-darkGreen dark:text-green'>
+          Software Engineer based in Seattle
+        </h3>
+        <div className='flex flex-row justify-center gap-6'>
+          <span
+            className='clickable'
+            onClick={openInNewTab('https://www.linkedin.com/in/kaydengrant/')}
+          >
+            <FaLinkedin size={40} />
+          </span>
+          <span
+            className='clickable'
+            onClick={openInNewTab('https://github.com/kaydengrant')}
+          >
+            <FaGithub size={40} />
+          </span>
+          <span
+            className='clickable'
+            onClick={openInNewTab('https://twitter.com/kaydengr')}
+          >
+            <FaTwitter size={40} />
+          </span>
+        </div>
+      </section>
+    </animated.div>
   );
 };
 
