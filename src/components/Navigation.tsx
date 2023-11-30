@@ -43,8 +43,8 @@ const Navigation: React.FC = () => {
           <div className='md:hidden'>
             <IconButton
               icon={isOpen ? <MdClose size={20} /> : <MdDehaze size={20} />}
-              bgColor='bg-black'
-              iconColor='text-white'
+              bgColor='bg-offwhite dark:bg-black'
+              iconColor='text-black dark:text-white'
               onClick={() => setOpen(!isOpen)}
             />
           </div>
