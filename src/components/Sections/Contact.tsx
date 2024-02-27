@@ -1,22 +1,20 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useInView, useSpring, animated } from '@react-spring/web';
 import {
   FaArrowRight,
-  FaCopy,
   FaGithub,
-  FaLink,
   FaLinkedin,
   FaTwitter,
 } from 'react-icons/fa';
 
-import OutlineButton from '../Buttons/OutlineButton';
+import { OutlineButton } from '../../components';
 import { openInNewTab } from '@/utils';
 
 type ContactForm = {
   name: string;
   email: string;
-  inquiry: string;
+  message: string;
 };
 
 const Contact: React.FC = () => {
@@ -32,22 +30,6 @@ const Contact: React.FC = () => {
     },
   });
 
-  const slideLeftAnim = useSpring({
-    opacity: inView ? 1 : 0,
-    x: inView ? '0px' : '-100vw',
-    config: {
-      friction: 50,
-    },
-  });
-
-  const slideRightAnim = useSpring({
-    opacity: inView ? 1 : 0,
-    x: inView ? '0px' : '100vw',
-    config: {
-      friction: 50,
-    },
-  });
-
   const {
     register,
     handleSubmit,
@@ -57,16 +39,19 @@ const Contact: React.FC = () => {
     formState: { errors },
   } = useForm<ContactForm>();
 
+  const [message, setMessage] = useState<string>('');
+
   const onSubmit = async (formData: ContactForm) => {
     await fetch('/api/mail', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
     })
+      .then((response) => response.json())
+      .then((response) => {
+        setMessage(response.message);
+      })
       .then(() => {
-        alert(
-          `Email sent successfully! I'll get back to you as soon as I can. Thanks!`
-        );
+        alert(message || 'Message failed to send, please try again soon.');
       })
       .catch((err) => {
         console.error(err);
@@ -75,7 +60,7 @@ const Contact: React.FC = () => {
 
   useEffect(() => {
     if (formState.isSubmitSuccessful) {
-      reset({ name: '', email: '', inquiry: '' });
+      reset({ name: '', email: '', message: '' });
     }
   }, [formState, isSubmitSuccessful, reset]);
 
@@ -129,17 +114,17 @@ const Contact: React.FC = () => {
             </span>
             <span className='flex flex-row items-center gap-4 mt-6'>
               <p className='underline underline-offset-4'>03</p>
-              <h4 className='font-normal'>{`Tell me about your inquiry.`}</h4>
+              <h4 className='font-normal'>{`Send me a message.`}</h4>
             </span>
             <span className='flex flex-col w-full'>
               <textarea
                 className='h-24'
                 placeholder='Type about your company, team, and/or project.'
-                {...register('inquiry', { required: true })}
+                {...register('message', { required: true })}
               />
               <div className='text-error'>
-                {errors.inquiry?.type == 'required' && (
-                  <p>Your inquiry is required</p>
+                {errors.message?.type == 'required' && (
+                  <p>Your message is required</p>
                 )}
               </div>
             </span>

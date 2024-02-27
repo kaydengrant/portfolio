@@ -1,28 +1,42 @@
 import dotenv from 'dotenv';
-import sgMail from '@sendgrid/mail';
+import mail from '@sendgrid/mail';
+import { NextResponse } from 'next/server';
 
 dotenv.config();
-sgMail.setApiKey(process.env.SENDGRID_API_KEY as string);
+mail.setApiKey(process.env.SENDGRID_API_KEY || '');
+
+type ResponseData = {
+  message?: string;
+}
 
 export async function POST(req: Request) {
-  const { name, email, inquiry } = await req.json();
+  let response: ResponseData = {};
+  const { name, email, message } = await req.json();
 
-  const message = `
+  const msg = `
     Name: ${name}\r\n
     Email: ${email}\r\n
-    Inquiry: ${inquiry}
+    Message: ${message}
   `;
 
   const mailData = {
     to: 'kaydenagrant@gmail.com',
     from: 'portfolio@kaydengrant.com',
-    subject: 'New inquiry from ' + name,
-    text: message,
-    html: message.replace(/\r\n/g, '<br>'),
+    subject: `${name.toUpperCase()} sent you a message from your Contact Form`,
+    text: msg,
+    html: msg.replace(/\r\n/g, '<br>'),
   };
 
-  await sgMail
+  await mail
     .send(mailData)
-    .then(() => console.log('Sent email sucessfully!'))
-    .catch((err: Error) => console.error(err.message));
+    .then(() => {
+      response = {
+        message: "Thank you! Your message was sent. I'll be in contact shortly."
+      };
+    })
+    .catch((err: Error) => { 
+      console.error(err)
+    });
+
+  return NextResponse.json(response);
 }
