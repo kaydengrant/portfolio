@@ -51,10 +51,6 @@ const About: React.FC = () => {
                   <p>Born in Seattle, Washington</p>
                 </li>
                 <li className='flex flex-row gap-4'>
-                  <p className='font-semibold w-10'>2013</p>
-                  <p>Programed first &quot;Hello World!&quot; in Java</p>
-                </li>
-                <li className='flex flex-row gap-4'>
                   <p className='font-semibold w-10'>2020</p>
                   <p>Achieved Eagle Scout rank advancement</p>
                 </li>
