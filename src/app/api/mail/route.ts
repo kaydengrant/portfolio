@@ -6,6 +6,7 @@ dotenv.config();
 mail.setApiKey(process.env.SENDGRID_API_KEY || '');
 
 type ResponseData = {
+  status?: string;
   message?: string;
 }
 
@@ -31,11 +32,16 @@ export async function POST(req: Request) {
     .send(mailData)
     .then(() => {
       response = {
+        status: 'success',
         message: "Thank you! Your message was sent. I'll be in contact shortly."
       };
     })
     .catch((err: Error) => { 
-      console.error(err)
+      response = {
+        status: 'failure',
+        message: 'Something went wrong, please try again soon.'
+      };
+      console.error(err);
     });
 
   return NextResponse.json(response);
