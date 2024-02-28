@@ -39,8 +39,6 @@ const Contact: React.FC = () => {
     formState: { errors },
   } = useForm<ContactForm>();
 
-  const [message, setMessage] = useState<string>('');
-
   const onSubmit = async (formData: ContactForm) => {
     await fetch('/api/mail', {
       method: 'POST',
@@ -48,10 +46,7 @@ const Contact: React.FC = () => {
     })
       .then((response) => response.json())
       .then((response) => {
-        setMessage(response.message);
-      })
-      .then(() => {
-        alert(message || 'Message failed to send, please try again soon.');
+        alert(response.message || 'Message failed to send, please try again soon.');
       })
       .catch((err) => {
         console.error(err);
