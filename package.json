@@ -3,7 +3,6 @@
   "version": "1.5.2",
   "description": "Kayden's portfolio website",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
