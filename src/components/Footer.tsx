@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className='flex flex-col text-gray py-2'>
       <div className='w-full h-0.5 bg-gray my-2' />
       <p className='flex justify-end text-sm'>
-        © 2023 Kayden Grant. All rights reserved.
+        © 2024 Kayden Grant. All rights reserved.
       </p>
     </footer>
   );
