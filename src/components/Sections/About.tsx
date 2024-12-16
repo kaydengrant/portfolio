@@ -41,8 +41,10 @@ const About: React.FC = () => {
           <div className='flex flex-col items-center md:flex-row justify-around gap-8'>
             <div className='flex flex-col justify-center md:max-w-[60%] text-left md:mt-0 gap-4'>
               <p>
-                {`Hello! I'm a passionate developer who likes to work all over the stack. I value collaboration 
-            in diverse teams and I enjoy tackling real-world challenges by developing creative solutions centered around user needs.`}
+                Hello! As a focused software engineer, I am committed to
+                developing scalable, reliable, and accessible applications. I
+                prioritize collaboration within diverse teams and address
+                real-world challenges by engineering user-centered solutions.
               </p>
               <ul>
                 <li className='flex flex-row gap-4'>
@@ -56,9 +58,8 @@ const About: React.FC = () => {
                 <li className='flex flex-row gap-4'>
                   <p className='font-semibold w-10'>2024</p>
                   <p>
-                    Graduated from the University of Washington with
-                    a Bachelors of Science in Computer Science & Software
-                    Engineering
+                    Graduated from the University of Washington with a Bachelors
+                    of Science in Computer Science & Software Engineering
                   </p>
                 </li>
               </ul>
