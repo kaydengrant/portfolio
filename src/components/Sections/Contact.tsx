@@ -37,23 +37,25 @@ const Contact: React.FC = () => {
   const [status, setStatus] = useState('');
 
   const onSubmit = async (formData: ContactForm) => {
-    const res = await fetch('/api/sendgrid', {
-      body: JSON.stringify(formData),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      method: 'POST',
-    });
+    try {
+      const res = await fetch('/api/mail', {
+        body: JSON.stringify(formData),
+        method: 'POST',
+      });
 
-    const { error } = await res.json();
-    if (error) {
-      console.log(error);
-      return;
+      const body = await res.json();
+
+      if (body.message == 'ok') {
+        setStatus('success');
+      }
+    } catch (error) {
+      console.error(error);
     }
   };
 
   useEffect(() => {
     if (formState.isSubmitSuccessful && status === 'success') {
+      alert("Success! Thanks for reaching out, I'll be in touch shortly.");
       reset({ name: '', email: '', message: '' });
     }
   }, [formState, isSubmitSuccessful, reset, status]);
