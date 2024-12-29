@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 import { useInView, useSpring, animated } from '@react-spring/web';
-import {
-  FaArrowRight,
-  FaGithub,
-  FaLinkedin,
-  FaTwitter,
-} from 'react-icons/fa';
+import { FaArrowRight, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 import { OutlineButton } from '../../components';
-import { openInNewTab } from '@/utils';
 
 type ContactForm = {
   name: string;
@@ -42,18 +37,19 @@ const Contact: React.FC = () => {
   const [status, setStatus] = useState('');
 
   const onSubmit = async (formData: ContactForm) => {
-    await fetch('/api/mail', {
-      method: 'POST',
+    const res = await fetch('/api/sendgrid', {
       body: JSON.stringify(formData),
-    })
-      .then((response) => response.json())
-      .then((response) => {
-        setStatus(response.status);
-        alert(response.message);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+    });
+
+    const { error } = await res.json();
+    if (error) {
+      console.log(error);
+      return;
+    }
   };
 
   useEffect(() => {
@@ -141,31 +137,26 @@ const Contact: React.FC = () => {
                 Together
               </span>
             </h1>
-            <h4 className='font-normal'>
-              {`Fill out the form provided and I'll get back to you in the next 48
-          hours.`}
-            </h4>
-            <div className='flex justify-center mb-16 md:mb-0 md:justify-end gap-6'>
-              <span
-                className='clickable'
-                onClick={openInNewTab(
-                  'https://www.linkedin.com/in/kaydengrant/'
-                )}
+            <div className='flex justify-center mb-16 md:mb-0 md:justify-end gap-4'>
+              <Link
+                href={'https://www.linkedin.com/in/kaydengrant/'}
+                target='_blank'
               >
-                <FaLinkedin size={40} />
-              </span>
-              <span
-                className='clickable'
-                onClick={openInNewTab('https://github.com/kaydengrant')}
-              >
-                <FaGithub size={40} />
-              </span>
-              <span
-                className='clickable'
-                onClick={openInNewTab('https://twitter.com/kaydengr')}
-              >
-                <FaTwitter size={40} />
-              </span>
+                <OutlineButton
+                  text='LinkedIn'
+                  Tag={'p'}
+                  icon={<FaLinkedinIn size={25} />}
+                  iconFirst
+                />
+              </Link>
+              <Link href={'https://github.com/kaydengrant'} target='_blank'>
+                <OutlineButton
+                  text='Github'
+                  Tag={'p'}
+                  icon={<FaGithub size={25} />}
+                  iconFirst
+                />
+              </Link>
             </div>
           </div>
         </section>

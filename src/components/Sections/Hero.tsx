@@ -1,9 +1,10 @@
 import React from 'react';
+import Link from 'next/link';
 import { animated, useInView, useSpring } from '@react-spring/web';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 import { ProfileBlob } from '..';
-import { openInNewTab } from '@/utils';
+import { OutlineButton } from '../Buttons';
 
 const Hero: React.FC = () => {
   const [heroRef, inView] = useInView({
@@ -27,29 +28,30 @@ const Hero: React.FC = () => {
         <div className='min-w-[350px]'>
           <ProfileBlob />
         </div>
-        <h1 className='text-black dark:text-white'>Kayden Grant</h1>
-        <h3 className='text-darkGreen dark:text-green'>
-          Software Engineer based in Seattle
-        </h3>
-        <div className='flex flex-row justify-center gap-6'>
-          <span
-            className='clickable'
-            onClick={openInNewTab('https://www.linkedin.com/in/kaydengrant/')}
+        <h1 className='text-black dark:text-white leading-[3rem]'>
+          Kayden Grant
+        </h1>
+        <h2 className='text-darkGreen dark:text-green'>Software Engineer</h2>
+        <div className='flex flex-row justify-center gap-4'>
+          <Link
+            href={'https://www.linkedin.com/in/kaydengrant/'}
+            target='_blank'
           >
-            <FaLinkedin size={40} />
-          </span>
-          <span
-            className='clickable'
-            onClick={openInNewTab('https://github.com/kaydengrant')}
-          >
-            <FaGithub size={40} />
-          </span>
-          <span
-            className='clickable'
-            onClick={openInNewTab('https://twitter.com/kaydengr')}
-          >
-            <FaTwitter size={40} />
-          </span>
+            <OutlineButton
+              text='LinkedIn'
+              Tag={'p'}
+              icon={<FaLinkedinIn size={25} />}
+              iconFirst
+            />
+          </Link>
+          <Link href={'https://github.com/kaydengrant'} target='_blank'>
+            <OutlineButton
+              text='Github'
+              Tag={'p'}
+              icon={<FaGithub size={25} />}
+              iconFirst
+            />
+          </Link>
         </div>
       </section>
     </animated.div>

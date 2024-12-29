@@ -1,8 +1,8 @@
 import React from 'react';
+import Link from 'next/link';
 import { useInView, useSpring, useTrail, animated } from '@react-spring/web';
 
 import { SectionHeader } from '..';
-import { openInNewTab } from '@/utils';
 import { skillsData } from '@/data';
 import OutlineButton from '../Buttons/OutlineButton';
 
@@ -16,7 +16,7 @@ const Skills: React.FC = () => {
     config: {
       mass: 20,
       friction: 100,
-    }
+    },
   });
 
   const trail = useTrail(skillsData.length, {
@@ -24,8 +24,8 @@ const Skills: React.FC = () => {
     config: {
       mass: 2,
       friction: 30,
-    }
-  })
+    },
+  });
 
   return (
     <>
@@ -35,17 +35,18 @@ const Skills: React.FC = () => {
           ref={skillsRef}
           className='flex flex-col items-center text-center gap-8'
         >
-          <SectionHeader title='Skills' />
+          <SectionHeader title='Tools' />
           <ul className='flex flex-wrap justify-center gap-3'>
-            {trail.map(({...style}, index) => (
+            {trail.map(({ ...style }, index) => (
               <animated.li key={index} style={style}>
-                <OutlineButton
-                  text={skillsData[index].title}
-                  icon={skillsData[index].icon}
-                  Tag={'p'}
-                  iconFirst={true}
-                  onClick={openInNewTab(skillsData[index].link)}
-                />
+                <Link href={skillsData[index].link} target='_blank'>
+                  <OutlineButton
+                    text={skillsData[index].title}
+                    icon={skillsData[index].icon}
+                    Tag={'p'}
+                    iconFirst={true}
+                  />
+                </Link>
               </animated.li>
             ))}
           </ul>

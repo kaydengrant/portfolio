@@ -10,12 +10,16 @@ import {
   SiGit,
   SiHtml5,
   SiJavascript,
+  SiJest,
   SiMysql,
   SiNextdotjs,
   SiNodedotjs,
+  SiPostgresql,
+  SiPostman,
   SiPython,
   SiReact,
   SiSanity,
+  SiSqlite,
   SiSquarespace,
   SiTailwindcss,
   SiTypescript,
@@ -104,31 +108,15 @@ export const projectData: ProjectDataProps[] = [
 ];
 
 export const skillsData: SkillsDataProps[] = [
-  { title: 'React', icon: <SiReact size={25} />, link: 'https://react.dev/' },
   {
     title: 'TypeScript',
     icon: <SiTypescript size={25} />,
     link: 'https://www.typescriptlang.org/',
   },
   {
-    title: 'Node.js',
-    icon: <SiNodedotjs size={25} />,
-    link: 'https://nodejs.org/en/',
-  },
-  {
-    title: 'Tailwind CSS',
-    icon: <SiTailwindcss size={25} />,
-    link: 'https://tailwindcss.com/',
-  },
-  {
-    title: 'Framer Motion',
-    icon: <SiFramer size={25} />,
-    link: 'https://www.framer.com/motion/',
-  },
-  {
-    title: 'Python',
-    icon: <SiPython size={25} />,
-    link: 'https://www.python.org/',
+    title: 'React.js',
+    icon: <SiReact size={25} />,
+    link: 'https://react.dev/',
   },
   {
     title: 'Next.js',
@@ -136,15 +124,40 @@ export const skillsData: SkillsDataProps[] = [
     link: 'https://nextjs.org/',
   },
   {
+    title: 'Node.js',
+    icon: <SiNodedotjs size={25} />,
+    link: 'https://nodejs.org/en/',
+  },
+  {
     title: 'Express.js',
     icon: <SiExpress size={25} />,
     link: 'https://expressjs.com/',
+  },
+  {
+    title: 'Tailwind CSS',
+    icon: <SiTailwindcss size={25} />,
+    link: 'https://tailwindcss.com/',
+  },
+  {
+    title: 'Jest',
+    icon: <SiJest size={25} />,
+    link: 'https://jestjs.io/',
+  },
+  {
+    title: 'Python',
+    icon: <SiPython size={25} />,
+    link: 'https://www.python.org/',
   },
   { title: 'Git', icon: <SiGit size={25} />, link: 'https://git-scm.com/' },
   {
     title: 'Docker',
     icon: <SiDocker size={25} />,
     link: 'https://www.docker.com/',
+  },
+  {
+    title: 'Postman',
+    icon: <SiPostman size={25} />,
+    link: 'https://www.postman.com/',
   },
   {
     title: 'AWS',
@@ -155,6 +168,16 @@ export const skillsData: SkillsDataProps[] = [
     title: 'MySQL',
     icon: <SiMysql size={25} />,
     link: 'https://www.mysql.com/',
+  },
+  {
+    title: 'SQLite',
+    icon: <SiSqlite size={25} />,
+    link: 'https://www.sqlite.org/index.html',
+  },
+  {
+    title: 'PostgreSQL',
+    icon: <SiPostgresql size={25} />,
+    link: 'https://www.postgresql.org/',
   },
   {
     title: 'Figma',
