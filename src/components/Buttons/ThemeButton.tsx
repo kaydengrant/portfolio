@@ -7,11 +7,8 @@ import { PiMoonFill, PiSunBold } from 'react-icons/pi';
 const ThemeButton: React.FC = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
 
-  useEffect(() => {
-    setTheme('dark');
-  }, []);
+  useEffect(() => setMounted(true), []);
 
   return (
     <>

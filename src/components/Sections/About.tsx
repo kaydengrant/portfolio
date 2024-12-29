@@ -42,10 +42,10 @@ const About: React.FC = () => {
           <div className='flex flex-col items-center md:flex-row justify-around gap-8'>
             <div className='flex flex-col justify-center md:max-w-[60%] text-left md:mt-0 gap-4'>
               <p>
-                Greetings! I'm Kayden, a passionate software engineer based in
-                Seattle Washington. I'm committed to developing scalable,
+                {`Greetings! I'm Kayden, a passionate software engineer based
+                in Seattle Washington. I'm committed to developing scalable,
                 reliable, and accessible applications that help solve everyday
-                challenges.
+                challenges.`}
               </p>
               <ul>
                 <li className='flex flex-row gap-4'>
