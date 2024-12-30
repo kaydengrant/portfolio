@@ -44,6 +44,7 @@ const Contact: React.FC = () => {
       });
 
       const body = await res.json();
+      console.log('body is=', body);
 
       if (body.message == 'ok') {
         setStatus('success');
