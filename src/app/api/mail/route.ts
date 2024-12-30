@@ -1,9 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import dotenv from 'dotenv';
 import { SESClient, SendRawEmailCommand } from '@aws-sdk/client-ses';
 import MailComposer from 'nodemailer/lib/mail-composer';
-
-dotenv.config();
 
 const sesClient = new SESClient({
   region: 'us-west-2',

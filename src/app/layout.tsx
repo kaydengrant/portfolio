@@ -1,6 +1,9 @@
 import './globals.css';
+import dotenv from 'dotenv';
 
 import { Rubik } from 'next/font/google';
+
+dotenv.config();
 
 const rubik = Rubik({
   subsets: ['latin'],
