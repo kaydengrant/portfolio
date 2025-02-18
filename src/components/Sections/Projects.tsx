@@ -37,7 +37,7 @@ const Projects: React.FC = () => {
                   target='_blank'
                   className='hover:no-underline'
                 >
-                  <div className='flex flex-col w-[300px] h-[350px] justify-between bg-white dark:bg-darkGray p-4 rounded-lg cursor-pointer transition-all select-none hover:scale-110'>
+                  <div className='flex flex-col w-[300px] h-[350px] justify-between bg-[#D2CBC0] dark:bg-darkGray p-4 rounded-lg cursor-pointer transition-all select-none hover:scale-110'>
                     <div className='flex flex-col gap-4'>
                       <div className='flex flex-row w-full justify-between items-center'>
                         <div className='relative flex w-[75px] h-[75px] justify-center items-center overflow-hidden rounded-md'>
@@ -49,7 +49,9 @@ const Projects: React.FC = () => {
                             className='object-cover'
                           />
                         </div>
-                        <p className='self-start text-white'>{project.date}</p>
+                        <p className='self-start text-black dark:text-white'>
+                          {project.date}
+                        </p>
                       </div>
                       <div>
                         <h3 className='text-darkGreen dark:text-green'>
