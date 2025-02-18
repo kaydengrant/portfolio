@@ -55,7 +55,9 @@ const Projects: React.FC = () => {
                         <h3 className='text-darkGreen dark:text-green'>
                           {project.title}
                         </h3>
-                        <p className='text-white'>{project.description}</p>
+                        <p className='text-black dark:text-white'>
+                          {project.description}
+                        </p>
                       </div>
                     </div>
                     <div className='flex flex-col gap-4 justify-end'>
